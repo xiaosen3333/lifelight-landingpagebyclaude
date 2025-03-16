@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation('common');
+  const router = useRouter();
+  
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Gradient - matches the orange gradient from design guide */}
@@ -11,21 +16,22 @@ const HeroSection = () => {
       <div className="absolute top-1/4 -right-10 w-72 h-72 bg-primary-light rounded-full opacity-20 blur-3xl"></div>
       <div className="absolute bottom-1/3 -left-10 w-80 h-80 bg-rose-pink-light rounded-full opacity-20 blur-3xl"></div>
 
+
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         <div className="fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient-primary">心光</span>: 你的AI生活记录伴侣
-          </h1>
+          <h1 
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            dangerouslySetInnerHTML={{ __html: t('hero.title') }}
+          ></h1>
           <p className="text-lg md:text-xl mb-8 text-gray-700">
-            人类有真正的自我被看见，情绪被照料与理解的需求。早期生活记录产品将一切放进了无底洞，没有回馈，每个人都是一座孤岛。
-            心光提出「AI 生活伴侣」的概念，从自我表达切入，去深刻的理解你这个独特的个体。
+            {t('hero.description')}
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="#download" className="btn btn-primary">
-              立即下载
+              {t('hero.downloadBtn')}
             </Link>
             <Link href="#features" className="btn btn-secondary">
-              了解更多
+              {t('hero.learnMoreBtn')}
             </Link>
           </div>
         </div>
@@ -40,14 +46,14 @@ const HeroSection = () => {
           </div>
 
           {/* Floating Elements with glass effect from design guide */}
-          <div className="absolute -top-10 -right-10 p-4 glass-effect shadow-lg">
+          <div className="absolute -top-10 -right-10 p-4 glass-effect shadow-lg z-10">
             <span className="text-2xl">✨</span>
-            <p className="text-sm font-medium">记录生活瞬间</p>
+            <p className="text-sm font-medium">{t('hero.recordMoments')}</p>
           </div>
 
-          <div className="absolute -bottom-8 -left-8 p-4 glass-effect shadow-lg">
+          <div className="absolute -bottom-8 -left-8 p-4 glass-effect shadow-lg z-10">
             <span className="text-2xl">💭</span>
-            <p className="text-sm font-medium">情感陪伴</p>
+            <p className="text-sm font-medium">{t('hero.emotionalCompanion')}</p>
           </div>
         </div>
       </div>

@@ -1,9 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 const Header = () => {
+  const { t } = useTranslation('common');
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+
+  const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'zh', name: '中文' },
+    { code: 'ja', name: '日本語' }
+  ];
+
+  const changeLanguage = (locale) => {
+    // Close the dropdown menu
+    setIsLangMenuOpen(false);
+    
+    // Use Next.js router for language change instead of direct URL manipulation
+    // This ensures proper handling of the locale
+    const { pathname, query, asPath } = router;
+    
+    // Log before changing
+    console.log(`Language changing to: ${locale}, current path: ${asPath}`);
+    
+    // Use router.push to change the locale without a full page reload
+    router.push({ pathname, query }, asPath, { locale });
+    
+    // Log after triggering the change
+    console.log(`Router push executed with locale: ${locale}`);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +42,22 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Only close if menu is open and click is outside the menu
+      if (isLangMenuOpen && !event.target.closest('.lang-switcher')) {
+        setIsLangMenuOpen(false);
+      }
+    };
+    
+    // Add click event listener to document
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isLangMenuOpen]);
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
@@ -32,7 +77,7 @@ const Header = () => {
           {/* Product Dropdown */}
           <div className="relative group">
             <button className="font-medium hover:text-primary-color transition-colors flex items-center">
-              Product
+              {t('header.product')}
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -40,13 +85,16 @@ const Header = () => {
             <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               <div className="py-1">
                 <Link href="/product/todo" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  To Do
+                  {t('header.journal')}
                 </Link>
                 <Link href="/product/all-in-one" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  All in One
+                  {t('header.companion')}
                 </Link>
                 <Link href="/product/ai-friend" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  AI Friend
+                  {t('header.gallery')}
+                </Link>
+                <Link href="/product/ai-friend" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  {t('header.insights')}
                 </Link>
               </div>
             </div>
@@ -55,7 +103,7 @@ const Header = () => {
           {/* Users Dropdown */}
           <div className="relative group">
             <button className="font-medium hover:text-primary-color transition-colors flex items-center">
-              Users
+              {t('header.users')}
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -63,28 +111,28 @@ const Header = () => {
             <div className="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               <div className="py-1">
                 <Link href="/users/travel-enthusiasts" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Travel Enthusiasts
+                  {t('header.travelEnthusiasts')}
                 </Link>
                 <Link href="/users/journal-lovers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Journal Lovers
+                  {t('header.journalLovers')}
                 </Link>
                 <Link href="/users/anime-fans" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Anime Fans
+                  {t('header.animeFans')}
                 </Link>
                 <Link href="/users/parents" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Parents
+                  {t('header.parents')}
                 </Link>
                 <Link href="/users/introverts" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Introverts
+                  {t('header.introverts')}
                 </Link>
                 <Link href="/users/adhd" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  ADHD
+                  {t('header.adhd')}
                 </Link>
                 <Link href="/users/emotionally-sensitive" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Emotionally Sensitive
+                  {t('header.emotionallySensitive')}
                 </Link>
                 <Link href="/users/fitness-enthusiasts" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Fitness Enthusiasts
+                  {t('header.fitnessEnthusiasts')}
                 </Link>
               </div>
             </div>
@@ -93,7 +141,7 @@ const Header = () => {
           {/* Docs Dropdown */}
           <div className="relative group">
             <button className="font-medium hover:text-primary-color transition-colors flex items-center">
-              Docs
+              {t('header.docs')}
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -101,29 +149,66 @@ const Header = () => {
             <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               <div className="py-1">
                 <Link href="/docs/getting-started" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Getting Started
+                  {t('header.gettingStarted')}
                 </Link>
                 <Link href="/docs/api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  API
+                  {t('header.api')}
                 </Link>
                 <Link href="/docs/tutorials" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Tutorials
+                  {t('header.tutorials')}
                 </Link>
               </div>
             </div>
           </div>
 
           <Link href="/download" className="font-medium hover:text-primary-color transition-colors">
-            Download
+            {t('header.download')}
           </Link>
 
           <Link href="/pricing" className="font-medium hover:text-primary-color transition-colors">
-            Pricing
+            {t('header.pricing')}
           </Link>
 
           <Link href="/download" className="btn btn-primary ml-2">
-            Get App
+            {t('header.getApp')}
           </Link>
+          
+          {/* Language Switcher */}
+          <div className="relative ml-4 lang-switcher">
+            <button 
+              className="flex items-center font-medium text-gray-800 hover:text-primary-color lang-switcher-btn" 
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsLangMenuOpen(!isLangMenuOpen);
+              }}
+            >
+              <span className="mr-1">{languages.find(lang => lang.code === router.locale)?.name || t('header.language')}</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            {isLangMenuOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 lang-switcher-dropdown">
+                <div className="py-1">
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        changeLanguage(language.code);
+                      }}
+                      className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
+                        router.locale === language.code ? 'text-primary-color font-medium' : 'text-gray-700'
+                      }`}
+                    >
+                      {language.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -148,77 +233,104 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               {/* Product Section */}
               <div className="border-b pb-2">
-                <div className="font-medium text-gray-800 mb-2">Product</div>
+                <div className="font-medium text-gray-800 mb-2">{t('header.product')}</div>
                 <div className="pl-4 flex flex-col space-y-2">
                   <Link href="/product/todo" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    To Do
+                    {t('header.journal')}
                   </Link>
                   <Link href="/product/all-in-one" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    All in One
+                    {t('header.companion')}
                   </Link>
                   <Link href="/product/ai-friend" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    AI Friend
+                    {t('header.gallery')}
+                  </Link>
+                  <Link href="/product/ai-friend" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
+                    {t('header.insights')}
                   </Link>
                 </div>
               </div>
 
               {/* Users Section */}
               <div className="border-b pb-2">
-                <div className="font-medium text-gray-800 mb-2">Users</div>
+                <div className="font-medium text-gray-800 mb-2">{t('header.users')}</div>
                 <div className="pl-4 flex flex-col space-y-2">
                   <Link href="/users/travel-enthusiasts" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Travel Enthusiasts
+                    {t('header.travelEnthusiasts')}
                   </Link>
                   <Link href="/users/journal-lovers" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Journal Lovers
+                    {t('header.journalLovers')}
                   </Link>
                   <Link href="/users/anime-fans" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Anime Fans
+                    {t('header.animeFans')}
                   </Link>
                   <Link href="/users/parents" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Parents
+                    {t('header.parents')}
                   </Link>
                   <Link href="/users/introverts" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Introverts
+                    {t('header.introverts')}
                   </Link>
                   <Link href="/users/adhd" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    ADHD
+                    {t('header.adhd')}
                   </Link>
                   <Link href="/users/emotionally-sensitive" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Emotionally Sensitive
+                    {t('header.emotionallySensitive')}
                   </Link>
                   <Link href="/users/fitness-enthusiasts" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Fitness Enthusiasts
+                    {t('header.fitnessEnthusiasts')}
                   </Link>
                 </div>
               </div>
 
               {/* Docs Section */}
               <div className="border-b pb-2">
-                <div className="font-medium text-gray-800 mb-2">Docs</div>
+                <div className="font-medium text-gray-800 mb-2">{t('header.docs')}</div>
                 <div className="pl-4 flex flex-col space-y-2">
                   <Link href="/docs/getting-started" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Getting Started
+                    {t('header.gettingStarted')}
                   </Link>
                   <Link href="/docs/api" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    API
+                    {t('header.api')}
                   </Link>
                   <Link href="/docs/tutorials" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    Tutorials
+                    {t('header.tutorials')}
                   </Link>
                 </div>
               </div>
 
               {/* Other Links */}
               <Link href="/download" className="font-medium hover:text-primary-color transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                Download
+                {t('header.download')}
               </Link>
               <Link href="/pricing" className="font-medium hover:text-primary-color transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                Pricing
+                {t('header.pricing')}
               </Link>
               <Link href="/download" className="btn btn-primary w-full text-center" onClick={() => setIsMobileMenuOpen(false)}>
-                Get App
+                {t('header.getApp')}
               </Link>
+              
+              {/* Mobile Language Switcher */}
+              <div className="border-t pt-4 mt-2 lang-switcher-mobile">
+                <div className="font-medium text-gray-800 mb-2">{t('header.language')}</div>
+                <div className="flex flex-wrap gap-2">
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        changeLanguage(language.code);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className={`px-3 py-1 text-sm rounded-full ${
+                        router.locale === language.code 
+                          ? 'bg-primary-color bg-opacity-10 text-primary-color' 
+                          : 'bg-gray-100 text-gray-700'
+                      }`}
+                    >
+                      {language.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </nav>
           </div>
         )}

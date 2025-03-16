@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation('common');
+  
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container">
@@ -15,7 +18,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-gray-400 mb-4">
-              你的AI生活记录伴侣。记录生活，反思情感，在AI支持下成长。
+              {t('footer.tagline')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -32,46 +35,46 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">产品</h4>
+            <h4 className="text-lg font-bold mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2">
-              <li><Link href="#features" className="text-gray-400 hover:text-white transition-colors">功能</Link></li>
-              <li><Link href="#journal" className="text-gray-400 hover:text-white transition-colors">记录</Link></li>
-              <li><Link href="#companion" className="text-gray-400 hover:text-white transition-colors">陪伴</Link></li>
-              <li><Link href="#gallery" className="text-gray-400 hover:text-white transition-colors">画廊</Link></li>
-              <li><Link href="#insights" className="text-gray-400 hover:text-white transition-colors">洞见</Link></li>
+              <li><Link href="#features" className="text-gray-400 hover:text-white transition-colors">{t('header.features')}</Link></li>
+              <li><Link href="#journal" className="text-gray-400 hover:text-white transition-colors">{t('header.journal')}</Link></li>
+              <li><Link href="#companion" className="text-gray-400 hover:text-white transition-colors">{t('header.companion')}</Link></li>
+              <li><Link href="#gallery" className="text-gray-400 hover:text-white transition-colors">{t('header.gallery')}</Link></li>
+              <li><Link href="#insights" className="text-gray-400 hover:text-white transition-colors">{t('header.insights')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">公司</h4>
+            <h4 className="text-lg font-bold mb-4">{t('footer.company')}</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">关于我们</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">招贤纳士</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">博客</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.aboutUs')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.careers')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.contact')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.blog')}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">支持</h4>
+            <h4 className="text-lg font-bold mb-4">{t('footer.support')}</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">帮助中心</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">隐私政策</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">服务条款</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">常见问题</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.helpCenter')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.privacyPolicy')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.termsOfService')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.faq')}</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} 心光 Lifelight. 保留所有权利。
+            {t('footer.copyright')}
           </p>
 
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">隐私政策</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">服务条款</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie政策</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{t('footer.privacyPolicy')}</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{t('footer.termsOfService')}</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">{t('footer.cookies')}</a>
           </div>
         </div>
       </div>

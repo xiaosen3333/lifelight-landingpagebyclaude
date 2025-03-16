@@ -1,17 +1,40 @@
 {
+  "meta": {
+    "title": "Lifelight - Your AI Life-Recording Companion",
+    "description": "Lifelight is an AI life-recording companion that helps you capture life moments, express feelings, and understand your emotional journey."
+  },
   "header": {
     "features": "Features",
     "journal": "Journal",
     "companion": "Companion",
     "gallery": "Gallery",
     "insights": "Insights",
-    "download": "Download"
+    "download": "Download",
+    "product": "Product",
+    "users": "Users",
+    "docs": "Docs",
+    "gettingStarted": "Getting Started",
+    "api": "API",
+    "tutorials": "Tutorials",
+    "pricing": "Pricing",
+    "getApp": "Get App",
+    "travelEnthusiasts": "Travel Enthusiasts",
+    "journalLovers": "Journal Lovers",
+    "animeFans": "Anime Fans",
+    "parents": "Parents",
+    "introverts": "Introverts",
+    "adhd": "ADHD",
+    "emotionallySensitive": "Emotionally Sensitive",
+    "fitnessEnthusiasts": "Fitness Enthusiasts",
+    "language": "Language"
   },
   "hero": {
-    "title": "Lifelight: Your AI Life-Recording Companion",
-    "description": "Humans have a genuine need to be seen, to have their emotions cared for and understood. Lifelight is there to support and accompany you through life's journey.",
+    "title": "<span class=\"text-gradient-primary\">Lifelight</span> - Your AI Life-Recording Companion",
+    "description": "Humans have a genuine need to be seen, to have their emotions cared for and understood. Early life recording products put everything into a bottomless pit with no feedback, leaving everyone as isolated islands. Lifelight introduces the concept of an 'AI Life Companion', starting from self-expression to deeply understand you as a unique individual.",
     "downloadBtn": "Download Now",
-    "learnMoreBtn": "Learn More"
+    "learnMoreBtn": "Learn More",
+    "recordMoments": "Record life moments",
+    "emotionalCompanion": "Emotional companion"
   },
   "features": {
     "title": "Core Features",
@@ -50,7 +73,11 @@
       "Express emotional states with the help of AI companion responses",
       "Capture subtle emotional fluctuations for a richer retrospective experience",
       "Create layered emotional recall experiences to help you revisit and treasure every moment"
-    ]
+    ],
+    "imageAlt": "Journal Feature Screenshot",
+    "emojiAlt": "Journal Emoji",
+    "quoteLine1": "Capture moments,",
+    "quoteLine2": "express feelings."
   },
   "companion": {
     "badge": "Companion ✨",
@@ -61,7 +88,10 @@
       "Customize your AI companion's personality and interaction style",
       "Engage in meaningful conversations about your life and emotions",
       "Receive personalized advice and emotional support when you need it most"
-    ]
+    ],
+    "personalized": "Personalized for you",
+    "friend": "Friend",
+    "alwaysWithYou": "Always by your side"
   },
   "gallery": {
     "badge": "Gallery ✨",
@@ -72,7 +102,12 @@
       "Track emotional trends with color-coded visualizations",
       "Easily switch between months for a chronological experience",
       "Discover patterns in your emotions and activities over time"
-    ]
+    ],
+    "imageAlt": "Gallery Feature Screenshot",
+    "emojiAlt": "Gallery Emoji",
+    "calendarView": "Calendar View",
+    "quoteLine1": "\"Art, memories,\"",
+    "quoteLine2": "and self-expression."
   },
   "insights": {
     "badge": "Insights ✨",
@@ -83,7 +118,11 @@
       "Receive AI-generated insights about your emotional trends",
       "Get personalized recommendations based on your mood patterns",
       "Visualize your journey through intuitive charts and graphs"
-    ]
+    ],
+    "analysis": "Analysis",
+    "personalizedInsights": "Personalized insights",
+    "understand": "Understand your",
+    "journey": "emotional journey."
   },
   "testimonials": {
     "title": "What Our Users Say",
@@ -94,6 +133,8 @@
     "description": "Download Lifelight now and begin capturing life's moments, expressing your feelings, and understanding your emotional journey with the help of your personal AI companion.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
+    "downloadOn": "Download on the",
+    "getItOn": "GET IT ON",
     "stats": {
       "downloads": "Downloads",
       "rating": "App Store Rating",

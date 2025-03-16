@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import HeroSection from '../components/HeroSection';
 import FeaturesSection from '../components/FeaturesSection';
 import CompanionSection from '../components/CompanionSection';
@@ -14,19 +16,56 @@ import Header from '../components/Header';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-    },
-  };
+  // Force locale to be one of our supported locales
+  const validLocale = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en';
+  
+  console.log(`getStaticProps called with locale: ${locale}, using: ${validLocale}`);
+  
+  try {
+    const translations = await serverSideTranslations(validLocale, ['common']);
+    
+    // Log successful translation loading
+    console.log(`Successfully loaded translations for locale: ${validLocale}`);
+    
+    return {
+      props: {
+        ...translations,
+        locale: validLocale, // Pass locale to page props
+      },
+    };
+  } catch (error) {
+    console.error('Error loading translations:', error);
+    // Fallback to English if there's an error
+    return {
+      props: {
+        ...(await serverSideTranslations('en', ['common'])),
+        locale: 'en',
+      },
+    };
+  }
 }
 
-export default function Home() {
+export default function Home({ locale }) {
+  const { t, i18n } = useTranslation('common');
+  const router = useRouter();
+  
+  // Force set language if received from props
+  useEffect(() => {
+    if (locale && i18n.language !== locale) {
+      console.log(`Setting language from props: ${locale}`);
+      i18n.changeLanguage(locale).then(() => {
+        console.log(`Home component: Language successfully changed to: ${locale}`);
+      }).catch(error => {
+        console.error(`Home component: Error changing language: ${error}`);
+      });
+    }
+  }, [locale, i18n]);
+
   return (
     <div className="main-container bg-bg-gray">
       <Head>
-        <title>心光 Lifelight - 你的AI生活记录伴侣</title>
-        <meta name="description" content="心光是一款AI生活记录伴侣，帮助你捕捉生活瞬间，表达感受，并理解你的情感旅程。" />
+        <title>{t('meta.title')}</title>
+        <meta name="description" content={t('meta.description')} />
         <link rel="icon" href="/favicon.ico" />
         {/* Add fonts to match design guidelines */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
