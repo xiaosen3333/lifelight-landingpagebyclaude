@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Primary Colors from design guide
         'primary-color': '#FF7400',
         'primary-light': '#F9A946',
         'rose-pink': '#FE2C58',
@@ -17,22 +18,87 @@ module.exports = {
         'space-purple-light': '#A9AFEB',
         'coffee-brown': '#A2845E',
         'coffee-brown-light': '#AC8E68',
+
+        // Neutral Colors
+        'bg-gray': '#F7F7F8',
+        'bg-light-blue': '#F2F2F6',
+        'divider': '#BFBFBF',
+        'dark-gray': '#A2A2A2',
+        'text-secondary': '#7F7F7F',
+        'text-primary': '#000000',
       },
       fontFamily: {
-        sans: ['SF Pro', 'ui-sans-serif', 'system-ui'],
-        serif: ['New York', 'ui-serif', 'Georgia'],
+        // Typography system from design guide
+        'sans': ['SF Pro', 'ui-sans-serif', 'system-ui'],
+        'serif': ['New York', 'ui-serif', 'Georgia'],
         'serif-cn': ['Source Han Serif CN', 'Noto Serif SC', 'serif'],
       },
       borderRadius: {
+        // Rounded corners from design guide
         'large': '20px',
         'medium': '16px',
         'small': '8px',
       },
       boxShadow: {
         'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+        'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
+        'card-hover': '0 8px 30px rgba(0, 0, 0, 0.1)',
+        'button': '0 5px 15px rgba(255, 116, 0, 0.2)',
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(90deg, var(--primary-color), var(--rose-pink))',
+        // Gradients based on color system
+        'gradient-primary': 'linear-gradient(90deg, #FF7400, #F9A946)',
+        'gradient-rose': 'linear-gradient(90deg, #FE2C58, #F3AAB1)',
+        'gradient-mint': 'linear-gradient(90deg, #00B2BC, #00C7BD)',
+        'gradient-purple': 'linear-gradient(90deg, #7963E1, #A9AFEB)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 1s ease-in',
+        'slide-up': 'slideUp 0.8s ease-out',
+        'slide-in-right': 'slideInRight 0.8s ease-out',
+        'slide-in-left': 'slideInLeft 0.8s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(30px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        },
+        slideInRight: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(50px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)'
+          },
+        },
+        slideInLeft: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(-50px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)'
+          },
+        },
+      },
+      backdropBlur: {
+        'xs': '2px',
+        'sm': '4px',
+        'md': '10px',
+        'lg': '16px',
       },
     },
   },

@@ -20,8 +20,9 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <div className="flex items-center font-bold text-2xl">
-              <span className="text-primary-color">Life</span>
-              <span className="text-rose-pink">light</span>
+              <span className="text-gradient-primary">心光</span>
+              <span className="text-rose-pink ml-1">Lifelight</span>
+              <div className="ml-2 w-5 h-5 rounded-full bg-gradient-primary"></div>
             </div>
           </Link>
         </div>
@@ -115,11 +116,11 @@ const Header = () => {
           <Link href="/download" className="font-medium hover:text-primary-color transition-colors">
             Download
           </Link>
-          
+
           <Link href="/pricing" className="font-medium hover:text-primary-color transition-colors">
             Pricing
           </Link>
-          
+
           <Link href="/download" className="btn btn-primary ml-2">
             Get App
           </Link>
@@ -160,7 +161,7 @@ const Header = () => {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Users Section */}
               <div className="border-b pb-2">
                 <div className="font-medium text-gray-800 mb-2">Users</div>
@@ -191,7 +192,7 @@ const Header = () => {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Docs Section */}
               <div className="border-b pb-2">
                 <div className="font-medium text-gray-800 mb-2">Docs</div>
@@ -207,7 +208,7 @@ const Header = () => {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Other Links */}
               <Link href="/download" className="font-medium hover:text-primary-color transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                 Download

@@ -3,21 +3,20 @@ import React from 'react';
 const DownloadSection = () => {
   return (
     <section id="download" className="section relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-rose-50 -z-10"></div>
+      {/* Background Elements - using the orange gradient from design guide */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-color to-primary-light opacity-10 -z-10"></div>
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary-light rounded-full opacity-10 blur-3xl -z-5"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-rose-pink-light rounded-full opacity-10 blur-3xl -z-5"></div>
-      
+
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Start Your Emotional Journey Today
+            今天就开始你的情感旅程
           </h2>
           <p className="text-xl mb-10 text-gray-700">
-            Download Lifelight now and begin capturing life's moments, expressing your feelings, and understanding 
-            your emotional journey with the help of your personal AI companion.
+            立即下载心光，开始捕捉生活的瞬间，表达你的感受，并在个人AI伴侣的帮助下理解你的情感旅程。
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
             <a href="#" className="flex items-center justify-center px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors">
               <svg className="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
@@ -28,7 +27,7 @@ const DownloadSection = () => {
                 <div className="text-xl font-semibold">App Store</div>
               </div>
             </a>
-            
+
             <a href="#" className="flex items-center justify-center px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors">
               <svg className="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3.5 20.7L12.4 12l-8.9-8.8v17.5zm10.6-8.7l2.8-2.8L6.1 3.7l8 8.3zm-3.3 3.3l8-4.8-2.9-2.9-5.1 7.7zM17.7 7l-1.7-1L5.3 20.7H7l10.7-13.7z" />
@@ -39,19 +38,19 @@ const DownloadSection = () => {
               </div>
             </a>
           </div>
-          
+
           <div className="flex justify-center space-x-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-primary-color mb-2">1M+</div>
-              <p className="text-gray-600">Downloads</p>
+              <p className="text-gray-600">下载量</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-rose-pink mb-2">4.8</div>
-              <p className="text-gray-600">App Store Rating</p>
+              <p className="text-gray-600">App Store评分</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-mint-blue mb-2">50+</div>
-              <p className="text-gray-600">Countries</p>
+              <p className="text-gray-600">国家/地区</p>
             </div>
           </div>
         </div>

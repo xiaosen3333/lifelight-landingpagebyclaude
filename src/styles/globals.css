@@ -3,32 +3,33 @@
 @tailwind utilities;
 
 :root {
-  /* Primary Colors */
-  --primary-color: #FF7400;
-  --primary-light: #F9A946;
-  --rose-pink: #FE2C58;
-  --rose-pink-light: #F3AAB1;
-  --mint-blue: #00B2BC;
-  --mint-blue-light: #00C7BD;
-  --space-purple: #7963E1;
-  --space-purple-light: #A9AFEB;
-  --coffee-brown: #A2845E;
-  --coffee-brown-light: #AC8E68;
+  /* Primary Colors - From design guide page 6 */
+  --primary-color: #ff7400;
+  --primary-light: #f9a946;
+  --rose-pink: #fe2c58;
+  --rose-pink-light: #f3aab1;
+  --mint-blue: #00b2bc;
+  --mint-blue-light: #00c7bd;
+  --space-purple: #7963e1;
+  --space-purple-light: #a9afeb;
+  --coffee-brown: #a2845e;
+  --coffee-brown-light: #ac8e68;
 
-  /* Neutral Colors */
-  --bg-gray: #F7F7F8;
-  --bg-light-blue: #F2F2F6;
-  --divider: #BFBFBF;
-  --dark-gray: #A2A2A2;
-  --text-secondary: #7F7F7F;
+  /* Neutral Colors - From design guide page 6 */
+  --bg-gray: #f7f7f8;
+  --bg-light-blue: #f2f2f6;
+  --divider: #bfbfbf;
+  --dark-gray: #a2a2a2;
+  --text-secondary: #7f7f7f;
   --text-primary: #000000;
 
-  /* Font Family */
-  --font-sans: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-serif-en: 'New York', Georgia, Cambria, 'Times New Roman', Times, serif;
-  --font-serif-cn: 'Source Han Serif CN', 'Noto Serif SC', serif;
+  /* Font Family - From design guide page 7 */
+  --font-sans: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-serif-en: "New York", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif-cn: "Source Han Serif CN", "Noto Serif SC", serif;
 
-  /* Border Radius */
+  /* Border Radius - From design guide page 9 */
   --radius-large: 20px;
   --radius-medium: 16px;
   --radius-small: 8px;
@@ -55,7 +56,13 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+/* Typography Styling Based on Design Guide page 7 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
 }
@@ -75,9 +82,15 @@ h3 {
   margin-bottom: 1rem;
 }
 
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
 p {
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .container {
@@ -90,6 +103,7 @@ p {
   padding: 5rem 0;
 }
 
+/* Button Styling Based on Design Guide */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -102,12 +116,18 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-light);
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 116, 0, 0.2);
 }
 
 .btn-secondary {
@@ -118,14 +138,54 @@ p {
 
 .btn-secondary:hover {
   background-color: rgba(255, 116, 0, 0.05);
+  transform: translateY(-2px);
 }
 
+.btn-rose {
+  background: linear-gradient(90deg, var(--rose-pink), var(--rose-pink-light));
+  color: white;
+}
+
+.btn-rose:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(254, 44, 88, 0.2);
+}
+
+.btn-mint {
+  background: linear-gradient(90deg, var(--mint-blue), var(--mint-blue-light));
+  color: white;
+}
+
+.btn-mint:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 178, 188, 0.2);
+}
+
+.btn-purple {
+  background: linear-gradient(
+    90deg,
+    var(--space-purple),
+    var(--space-purple-light)
+  );
+  color: white;
+}
+
+.btn-purple:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(121, 99, 225, 0.2);
+}
+
+/* Card styling based on design guide */
 .card {
   background-color: white;
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-large);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .card:hover {
@@ -133,20 +193,167 @@ p {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Frosted glass effect from design guide page 9 */
 .glass-effect {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-medium);
 }
 
-.text-gradient {
-  background: linear-gradient(90deg, var(--primary-color), var(--rose-pink));
+/* Gradient text effects */
+.text-gradient-primary {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+.text-gradient-rose {
+  background: linear-gradient(90deg, var(--rose-pink), var(--rose-pink-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-mint {
+  background: linear-gradient(90deg, var(--mint-blue), var(--mint-blue-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(
+    90deg,
+    var(--space-purple),
+    var(--space-purple-light)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Background gradients */
+.bg-gradient-primary {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+}
+
+.bg-gradient-rose {
+  background: linear-gradient(90deg, var(--rose-pink), var(--rose-pink-light));
+}
+
+.bg-gradient-mint {
+  background: linear-gradient(90deg, var(--mint-blue), var(--mint-blue-light));
+}
+
+.bg-gradient-purple {
+  background: linear-gradient(
+    90deg,
+    var(--space-purple),
+    var(--space-purple-light)
+  );
+}
+
+/* Feature badges styling */
+.feature-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.badge-primary {
+  background-color: rgba(255, 116, 0, 0.1);
+  color: var(--primary-color);
+}
+
+.badge-rose {
+  background-color: rgba(254, 44, 88, 0.1);
+  color: var(--rose-pink);
+}
+
+.badge-mint {
+  background-color: rgba(0, 178, 188, 0.1);
+  color: var(--mint-blue);
+}
+
+.badge-purple {
+  background-color: rgba(121, 99, 225, 0.1);
+  color: var(--space-purple);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Utility classes */
 .flex {
   display: flex;
 }
@@ -195,15 +402,16 @@ p {
   gap: 2rem;
 }
 
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   h1 {
     font-size: 3rem;
   }
-  
+
   h2 {
     font-size: 2.25rem;
   }
-  
+
   .grid-cols-4 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -213,45 +421,21 @@ p {
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   h3 {
     font-size: 1.5rem;
   }
-  
-  .grid-cols-3, .grid-cols-2 {
+
+  .grid-cols-3,
+  .grid-cols-2 {
     grid-template-columns: 1fr;
   }
-  
+
   .section {
     padding: 3rem 0;
-  }
-}
-
-/* Animation Classes */
-.fade-in {
-  animation: fadeIn 1s ease-in;
-}
-
-.slide-up {
-  animation: slideUp 0.8s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { 
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to { 
-    opacity: 1;
-    transform: translateY(0);
   }
 }

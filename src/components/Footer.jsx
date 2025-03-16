@@ -9,13 +9,13 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <Link href="/">
               <div className="flex items-center font-bold text-2xl mb-4">
-                <span className="text-white">Life</span>
-                <span className="text-rose-pink-light">light</span>
+                <span className="text-white">心光</span>
+                <span className="text-rose-pink-light ml-1">Lifelight</span>
+                <div className="ml-2 w-4 h-4 rounded-full bg-gradient-primary"></div>
               </div>
             </Link>
             <p className="text-gray-400 mb-4">
-              Your AI Life-Recording Companion. 
-              Record your life, reflect on your emotions, and grow with AI support.
+              你的AI生活记录伴侣。记录生活，反思情感，在AI支持下成长。
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -30,48 +30,48 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
-            <h4 className="text-lg font-bold mb-4">Product</h4>
+            <h4 className="text-lg font-bold mb-4">产品</h4>
             <ul className="space-y-2">
-              <li><Link href="#features" className="text-gray-400 hover:text-white transition-colors">Features</Link></li>
-              <li><Link href="#journal" className="text-gray-400 hover:text-white transition-colors">Journal</Link></li>
-              <li><Link href="#companion" className="text-gray-400 hover:text-white transition-colors">Companion</Link></li>
-              <li><Link href="#gallery" className="text-gray-400 hover:text-white transition-colors">Gallery</Link></li>
-              <li><Link href="#insights" className="text-gray-400 hover:text-white transition-colors">Insights</Link></li>
+              <li><Link href="#features" className="text-gray-400 hover:text-white transition-colors">功能</Link></li>
+              <li><Link href="#journal" className="text-gray-400 hover:text-white transition-colors">记录</Link></li>
+              <li><Link href="#companion" className="text-gray-400 hover:text-white transition-colors">陪伴</Link></li>
+              <li><Link href="#gallery" className="text-gray-400 hover:text-white transition-colors">画廊</Link></li>
+              <li><Link href="#insights" className="text-gray-400 hover:text-white transition-colors">洞见</Link></li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 className="text-lg font-bold mb-4">Company</h4>
+            <h4 className="text-lg font-bold mb-4">公司</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">关于我们</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">招贤纳士</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">博客</a></li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 className="text-lg font-bold mb-4">Support</h4>
+            <h4 className="text-lg font-bold mb-4">支持</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">帮助中心</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">隐私政策</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">服务条款</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">常见问题</a></li>
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Lifelight. All rights reserved.
+            © {new Date().getFullYear()} 心光 Lifelight. 保留所有权利。
           </p>
-          
+
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Cookies</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">隐私政策</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">服务条款</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie政策</a>
           </div>
         </div>
       </div>
