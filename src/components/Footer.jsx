@@ -4,16 +4,26 @@ import { useTranslation } from 'next-i18next';
 
 const Footer = () => {
   const { t } = useTranslation('common');
-  
+
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container">
+    <footer className="bg-gray-900 text-white py-12 relative">
+      {/* 陆地主题背景图 */}
+      <div className="absolute inset-0 z-0 opacity-10"
+        style={{
+          backgroundImage: "url('/sources/陆地主题背景图.png')",
+          backgroundSize: "fit",
+          backgroundPosition: "right",
+          backgroundRepeat: "no-repeat"
+        }}>
+      </div>
+
+      <div className="container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <Link href="/">
               <div className="flex items-center font-bold text-2xl mb-4">
-                <span className="text-white">心光</span>
-                <span className="text-rose-pink-light ml-1">Lifelight</span>
+                <span className="text-gradient-primary">心光 Lifelight</span>
+                <span className="text-gradient-rose ml-1"></span>
                 <div className="ml-2 w-4 h-4 rounded-full bg-gradient-primary"></div>
               </div>
             </Link>

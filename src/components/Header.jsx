@@ -65,8 +65,8 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <div className="flex items-center font-bold text-2xl">
-              <span className="text-gradient-primary">心光</span>
-              <span className="text-rose-pink ml-1">Lifelight</span>
+              <span className="text-gradient-primary">心光 Lifelight</span>
+              <span className="text-rose-pink ml-1"></span>
               <div className="ml-2 w-5 h-5 rounded-full bg-gradient-primary"></div>
             </div>
           </Link>
@@ -176,7 +176,7 @@ const Header = () => {
           {/* Language Switcher */}
           <div className="relative ml-4 lang-switcher">
             <button
-              className="flex items-center font-medium text-gray-800 hover:text-primary-color lang-switcher-btn"
+              className="flex items-center px-3 py-1 rounded-full border border-gray-300 bg-white text-gray-800 hover:border-primary-color hover:text-primary-color transition-colors lang-switcher-btn"
               onClick={(e) => {
                 e.stopPropagation();
                 setIsLangMenuOpen(!isLangMenuOpen);
@@ -319,9 +319,9 @@ const Header = () => {
                         changeLanguage(language.code);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`px-3 py-1 text-sm rounded-full ${router.locale === language.code
-                        ? 'bg-primary-color bg-opacity-10 text-primary-color'
-                        : 'bg-gray-100 text-gray-700'
+                      className={`px-3 py-1 text-sm rounded-full border ${router.locale === language.code
+                        ? 'border-primary-color bg-primary-color bg-opacity-10 text-primary-color'
+                        : 'border-gray-300 bg-gray-50 text-gray-700 hover:border-primary-color'
                         }`}
                     >
                       {language.name}

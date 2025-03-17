@@ -60,7 +60,17 @@ export default function Home({ locale }) {
   }, [locale, i18n]);
 
   return (
-    <div className="main-container bg-bg-gray">
+    <div className="main-container bg-bg-gray relative">
+      {/* 全局鲸鱼背景纹理 - 以更低的透明度应用于整个页面 */}
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]" 
+        style={{ 
+          backgroundImage: "url('/sources/鲸鱼背景.png')",
+          backgroundSize: "800px auto",
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat"
+        }}>
+      </div>
+      
       <Head>
         <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
