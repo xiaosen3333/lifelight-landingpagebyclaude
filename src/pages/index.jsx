@@ -18,15 +18,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 export async function getStaticProps({ locale }) {
   // Force locale to be one of our supported locales
   const validLocale = ['en', 'zh', 'ja'].includes(locale) ? locale : 'en';
-  
-  console.log(`getStaticProps called with locale: ${locale}, using: ${validLocale}`);
-  
+
+
   try {
     const translations = await serverSideTranslations(validLocale, ['common']);
-    
+
     // Log successful translation loading
-    console.log(`Successfully loaded translations for locale: ${validLocale}`);
-    
+
     return {
       props: {
         ...translations,
@@ -48,7 +46,7 @@ export async function getStaticProps({ locale }) {
 export default function Home({ locale }) {
   const { t, i18n } = useTranslation('common');
   const router = useRouter();
-  
+
   // Force set language if received from props
   useEffect(() => {
     if (locale && i18n.language !== locale) {
