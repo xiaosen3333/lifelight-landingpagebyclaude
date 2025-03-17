@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import HeroSection from '../components/HeroSection';
@@ -12,6 +11,7 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import DownloadSection from '../components/DownloadSection';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import SEO from '../components/SEO';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -68,10 +68,15 @@ export default function Home({ locale }) {
         }}>
       </div>
 
-      <Head>
-        <title>{t('meta.title')}</title>
-        <meta name="description" content={t('meta.description')} />
-      </Head>
+      <SEO
+        title={t('seo.homeMeta.title')}
+        description={t('seo.homeMeta.description')}
+        openGraph={{
+          type: 'website',
+          title: t('seo.homeMeta.title'),
+          description: t('seo.homeMeta.description'),
+        }}
+      />
 
       <Header />
 

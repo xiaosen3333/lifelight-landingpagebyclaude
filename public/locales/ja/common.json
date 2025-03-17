@@ -1,4 +1,20 @@
 {
+  "seo": {
+    "defaultTitle": "Lifelight - あなたのAIライフレコーディングコンパニオン",
+    "defaultDescription": "Lifelightはタスクの整理、思考の記録、AIを活用したツールによる生産性向上をサポートします。",
+    "homeMeta": {
+      "title": "Lifelight - あなたのAIライフレコーディングコンパニオン",
+      "description": "タスク管理、ジャーナリングなどのAI駆動ツールスイートで生産性を向上させましょう。"
+    },
+    "pricingMeta": {
+      "title": "Lifelight料金 - 最適なプランを選択", 
+      "description": "あなたの生産性ニーズに合わせて設計された柔軟な料金プランをご覧ください。"
+    },
+    "downloadMeta": {
+      "title": "すべてのプラットフォーム用Lifelightをダウンロード",
+      "description": "Mac、Windows、iOS、Androidに対応したLifelightをダウンロードして、どこでも生産性を向上させましょう。"
+    }
+  },
   "meta": {
     "title": "Lifelight - あなたのAI生活記録コンパニオン",
     "description": "Lifelightは、人生の瞬間を捉え、感情を表現し、あなたの感情の旅を理解するのを助けるAI生活記録コンパニオンです。"

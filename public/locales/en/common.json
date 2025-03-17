@@ -1,4 +1,20 @@
 {
+  "seo": {
+    "defaultTitle": "Lifelight - Your AI Life-Recording Companion",
+    "defaultDescription": "Lifelight helps you organize tasks, journal your thoughts, and boost productivity with AI-powered tools.",
+    "homeMeta": {
+      "title": "Lifelight - Your AI Life-Recording Companion",
+      "description": "Transform your productivity with Lifelight's suite of AI-powered tools for task management, journaling, and more."
+    },
+    "pricingMeta": {
+      "title": "Lifelight Pricing - Choose Your Perfect Plan", 
+      "description": "Explore Lifelight's flexible pricing plans designed to fit your productivity needs."
+    },
+    "downloadMeta": {
+      "title": "Download Lifelight for All Platforms",
+      "description": "Download Lifelight for Mac, Windows, iOS, and Android to boost your productivity anywhere."
+    }
+  },
   "meta": {
     "title": "Lifelight - Your AI Life-Recording Companion",
     "description": "Lifelight is an AI life-recording companion that helps you capture life moments, express feelings, and understand your emotional journey."

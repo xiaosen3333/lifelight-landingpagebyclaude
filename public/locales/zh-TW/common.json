@@ -1,4 +1,20 @@
 {
+  "seo": {
+    "defaultTitle": "Lifelight - 您的AI生活記錄夥伴",
+    "defaultDescription": "Lifelight幫助您組織任務，記錄思想，並通過AI驅動的工具提高生產力。",
+    "homeMeta": {
+      "title": "Lifelight - 您的AI生活記錄夥伴",
+      "description": "通過Lifelight的AI驅動工具套件提高您的生產力，包括任務管理、日記等功能。"
+    },
+    "pricingMeta": {
+      "title": "Lifelight價格 - 選擇您的完美方案", 
+      "description": "探索Lifelight的靈活定價方案，為您的生產力需求量身定制。"
+    },
+    "downloadMeta": {
+      "title": "下載適用於所有平台的Lifelight",
+      "description": "下載適用於Mac、Windows、iOS和Android的Lifelight，隨時隨地提高您的生產力。"
+    }
+  },
   "meta": {
     "title": "心光 - 你的AI生活記錄夥伴",
     "description": "心光是你的AI生活夥伴，捕捉瞬間，表達感受，理解情緒，創造有意義的生活回憶。"

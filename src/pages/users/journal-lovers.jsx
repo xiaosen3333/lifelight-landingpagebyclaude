@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SEO from '../../components/SEO';
 import OptimizedImage from '../../components/OptimizedImage';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -27,10 +27,15 @@ const JournalLoversPage = () => {
           backgroundRepeat: "repeat"
         }}>
       </div>
-      <Head>
-        <title>{t('journalLovers.meta.title')}</title>
-        <meta name="description" content={t('journalLovers.meta.description')} />
-      </Head>
+      <SEO
+        title={t('journalLovers.meta.title')}
+        description={t('journalLovers.meta.description')}
+        openGraph={{
+          type: 'website',
+          title: t('journalLovers.meta.title'),
+          description: t('journalLovers.meta.description'),
+        }}
+      />
 
       <Header />
 

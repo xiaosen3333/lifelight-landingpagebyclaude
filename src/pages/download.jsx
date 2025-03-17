@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
@@ -26,10 +26,15 @@ const DownloadPage = () => {
           backgroundRepeat: "repeat"
         }}>
       </div>
-      <Head>
-        <title>{t('downloadPage.meta.title')}</title>
-        <meta name="description" content={t('downloadPage.meta.description')} />
-      </Head>
+      <SEO
+        title={t('seo.downloadMeta.title')}
+        description={t('seo.downloadMeta.description')}
+        openGraph={{
+          type: 'website',
+          title: t('seo.downloadMeta.title'),
+          description: t('seo.downloadMeta.description'),
+        }}
+      />
 
       <Header />
 

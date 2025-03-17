@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SEO from '../../components/SEO';
 import OptimizedImage from '../../components/OptimizedImage';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -18,10 +18,15 @@ const TodoPage = () => {
   const { t } = useTranslation('common');
   return (
     <div className="min-h-screen flex flex-col bg-bg-gray">
-      <Head>
-        <title>{t('todo.meta.title')}</title>
-        <meta name="description" content={t('todo.meta.description')} />
-      </Head>
+      <SEO
+        title={t('todo.meta.title')}
+        description={t('todo.meta.description')}
+        openGraph={{
+          type: 'website',
+          title: t('todo.meta.title'),
+          description: t('todo.meta.description'),
+        }}
+      />
 
       <Header />
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
@@ -98,10 +98,15 @@ const PricingPage = () => {
           backgroundRepeat: "repeat"
         }}>
       </div>
-      <Head>
-        <title>{t('pricing.meta.title')}</title>
-        <meta name="description" content={t('pricing.meta.description')} />
-      </Head>
+      <SEO
+        title={t('seo.pricingMeta.title')}
+        description={t('seo.pricingMeta.description')}
+        openGraph={{
+          type: 'website',
+          title: t('seo.pricingMeta.title'),
+          description: t('seo.pricingMeta.description'),
+        }}
+      />
 
       <Header />
 
