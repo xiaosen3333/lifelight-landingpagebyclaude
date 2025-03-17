@@ -178,6 +178,17 @@ p {
   box-shadow: 0 5px 15px rgba(121, 99, 225, 0.2);
 }
 
+.btn-coffee {
+  background: linear-gradient(90deg, var(--coffee-brown), var(--coffee-brown-light));
+  color: white;
+}
+
+.btn-coffee:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(162, 132, 94, 0.2);
+}
+
 /* Card styling based on design guide */
 .card {
   background-color: white;
@@ -241,6 +252,17 @@ p {
   color: transparent;
 }
 
+.text-gradient-coffee {
+  background: linear-gradient(
+    90deg,
+    var(--coffee-brown),
+    var(--coffee-brown-light)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Background gradients */
 .bg-gradient-primary {
   background: linear-gradient(
@@ -263,6 +285,14 @@ p {
     90deg,
     var(--space-purple),
     var(--space-purple-light)
+  );
+}
+
+.bg-gradient-coffee {
+  background: linear-gradient(
+    90deg,
+    var(--coffee-brown),
+    var(--coffee-brown-light)
   );
 }
 
@@ -294,6 +324,11 @@ p {
 .badge-purple {
   background-color: rgba(121, 99, 225, 0.1);
   color: var(--space-purple);
+}
+
+.badge-coffee {
+  background-color: rgba(162, 132, 94, 0.1);
+  color: var(--coffee-brown);
 }
 
 /* Animation Classes */

@@ -78,14 +78,14 @@ const HeroSection = () => {
           <div className="absolute -top-10 -right-5 p-4 glass-effect rounded-xl shadow-xl z-20 animate-float group">
             <div className="flex items-center space-x-3 group-hover:scale-105 transition-transform duration-300">
               <span className="text-2xl animate-pulse-slow">✨</span>
-              <p className="text-sm font-bold text-gradient-purple m-0">{t('hero.recordMoments')}</p>
+              <p className="text-sm font-bold text-gradient-coffee m-0">{t('hero.recordMoments')}</p>
             </div>
           </div>
 
           <div className="absolute -bottom-8 -left-5 p-4 glass-effect rounded-xl shadow-xl z-20 animate-float delay-500 group">
             <div className="flex items-center space-x-3 group-hover:scale-105 transition-transform duration-300">
               <span className="text-2xl animate-pulse-slow">💭</span>
-              <p className="text-sm font-bold text-gradient-rose m-0">{t('hero.emotionalCompanion')}</p>
+              <p className="text-sm font-bold text-gradient-purple m-0">{t('hero.emotionalCompanion')}</p>
             </div>
           </div>
 

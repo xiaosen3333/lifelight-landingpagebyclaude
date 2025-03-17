@@ -51,6 +51,7 @@ module.exports = {
         'gradient-rose': 'linear-gradient(90deg, #FE2C58, #F3AAB1)',
         'gradient-mint': 'linear-gradient(90deg, #00B2BC, #00C7BD)',
         'gradient-purple': 'linear-gradient(90deg, #7963E1, #A9AFEB)',
+        'gradient-coffee': 'linear-gradient(90deg, #A2845E, #AC8E68)',
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-in',
