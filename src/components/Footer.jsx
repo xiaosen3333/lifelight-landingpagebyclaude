@@ -27,8 +27,8 @@ const Footer = () => {
                 <div className="ml-2 w-4 h-4 rounded-full bg-gradient-primary"></div>
               </div>
             </Link>
-            <p className="text-gray-400 mb-4">
-              {t('footer.tagline')}
+            <p className="text-gray-400 mb-4" dangerouslySetInnerHTML={{ __html: t('footer.tagline') }}>
+
             </p>
 
           </div>

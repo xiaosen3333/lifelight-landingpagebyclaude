@@ -12,7 +12,8 @@ const Header = () => {
 
   const languages = [
     { code: 'en', name: 'English' },
-    { code: 'zh', name: '中文' },
+    { code: 'zh', name: '简体中文' },
+    { code: 'zh-TW', name: '繁體中文' },
     { code: 'ja', name: '日本語' }
   ];
 
@@ -54,7 +55,7 @@ const Header = () => {
   }, [isLangMenuOpen]);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'backdrop-blur-sm bg-white/30 py-5'}`}>
       <div className="container flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/">

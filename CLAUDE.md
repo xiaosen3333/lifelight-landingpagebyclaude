@@ -1,32 +1,5 @@
 # Lifelight Landing Page Design Guidelines
 
-## Background Images
-
-**Important**: All new pages should include the whale background image pattern for visual consistency.
-
-### Standard Background Implementation
-```jsx
-<div className="absolute inset-0 z-0 opacity-10"
-  style={{
-    backgroundImage: "url('/optimized/鲸鱼背景.webp')",
-    backgroundSize: "contain",
-    backgroundPosition: "right",
-    backgroundRepeat: "no-repeat"
-  }}>
-</div>
-```
-
-For footer sections, use the land-themed background:
-```jsx
-<div className="absolute inset-0 z-0 opacity-10"
-  style={{
-    backgroundImage: "url('/optimized/陆地主题背景图.webp')",
-    backgroundSize: "contain",
-    backgroundPosition: "right",
-    backgroundRepeat: "no-repeat"
-  }}>
-</div>
-```
 
 ## Color System
 

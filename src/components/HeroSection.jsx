@@ -13,6 +13,14 @@ const HeroSection = () => {
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-color/20 to-primary-light/15 -z-10"></div>
 
+      {/* Background image positioned at right top corner, behind header glass effect */}
+      <div className="absolute -top-20 -right-20 w-2/3 h-2/3 -z-5" style={{
+        backgroundImage: "url('/optimized/Group 59629.webp')",
+        backgroundPosition: "top right",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat"
+      }}></div>
+
       {/* Animated background shapes */}
       <div className="absolute top-20 right-[10%] w-96 h-96 bg-primary-light/20 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-40 left-[5%] w-80 h-80 bg-rose-pink-light/30 rounded-full blur-3xl animate-float delay-700"></div>
@@ -31,7 +39,7 @@ const HeroSection = () => {
           <div className="relative">
             {/* Decorative badge */}
             <div className="absolute -top-5 -left-6 glass-effect text-gradient-rose px-4 py-1 rounded-full text-sm font-bold shadow-lg animate-bounce-gentle transform rotate-[-5deg]">
-              AI + {t('header.journal')}
+              AI + {t('hero.life')}
             </div>
 
             <h1
@@ -97,7 +105,7 @@ const HeroSection = () => {
           <div className="absolute top-1/3 -right-10 p-3 glass-effect rounded-xl shadow-xl z-10 animate-bounce-gentle group hidden md:block">
             <div className="flex items-center justify-center space-x-2 group-hover:scale-105 transition-transform duration-300">
               <span className="text-xl">🚀</span>
-              <p className="text-xs font-bold  text-gradient-mint m-0">AI {t('header.companion')}</p>
+              <p className="text-xs font-bold  text-gradient-mint m-0">AI {t('hero.companion')}</p>
             </div>
           </div>
 

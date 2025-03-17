@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = {
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh', 'ja'],
+    locales: ['en', 'zh', 'zh-TW', 'ja'],
     localeDetection: true,
   },
   localePath: path.resolve('./public/locales'),
@@ -17,7 +17,7 @@ module.exports = {
   load: 'all',
   
   // Force load for all locales on startup
-  preload: ['en', 'zh', 'ja'],
+  preload: ['en', 'zh', 'zh-TW', 'ja'],
   
   // Set detection order 
   detection: {
