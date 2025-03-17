@@ -29,8 +29,7 @@ export default function SEO({ title, description, openGraph }) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content="index, follow" />
-      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-      <link rel="sitemap" type="application/xml" href="/static-sitemap.xml" />
+      <link rel="sitemap" type="application/xml" href="/lifelight-sitemap.xml" />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={og.type} />

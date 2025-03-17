@@ -7,7 +7,7 @@ module.exports = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh', 'zh-TW', 'ja'],
-    localeDetection: true,
+    localeDetection: false,
   },
   localePath: path.resolve('./public/locales'),
   debug: false, // 禁用调试以防止配置信息打印

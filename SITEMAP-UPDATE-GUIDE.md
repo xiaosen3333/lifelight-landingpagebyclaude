@@ -30,7 +30,7 @@ npm install --save-dev next-sitemap
    ```
 
 生成的文件会位于以下位置：
-- 站点地图：`/public/sitemap.xml`
+- 站点地图：`/public/lifelight-sitemap.xml`
 - 站点地图索引：`/public/sitemap-index.xml`
 - Robots.txt 文件：`/public/robots.txt`
 

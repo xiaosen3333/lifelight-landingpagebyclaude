@@ -16,12 +16,12 @@ module.exports = {
         allow: '/',
       },
     ],
-    additionalSitemaps: [
-      'https://lifelight.app/static-sitemap.xml',
-    ],
   },
   // 排除的路径
   exclude: ['/404', '/500', '/server-sitemap.xml'],
+  
+  // 生成的站点地图文件名
+  sitemapName: 'lifelight-sitemap.xml',
   
   // 多语言支持 - 列出所有语言代码
   alternateRefs: [
