@@ -24,14 +24,8 @@ const Header = () => {
     // This ensures proper handling of the locale
     const { pathname, query, asPath } = router;
 
-    // Log before changing
-    console.log(`Language changing to: ${locale}, current path: ${asPath}`);
-
     // Use router.push to change the locale without a full page reload
     router.push({ pathname, query }, asPath, { locale });
-
-    // Log after triggering the change
-    console.log(`Router push executed with locale: ${locale}`);
   };
 
   useEffect(() => {

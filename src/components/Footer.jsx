@@ -10,7 +10,7 @@ const Footer = () => {
       {/* 陆地主题背景图 */}
       <div className="absolute inset-0 z-0 opacity-10"
         style={{
-          backgroundImage: "url('/sources/陆地主题背景图.png')",
+          backgroundImage: "url('/optimized/陆地主题背景图.webp')",
           backgroundSize: "fit",
           backgroundPosition: "right",
           backgroundRepeat: "no-repeat"

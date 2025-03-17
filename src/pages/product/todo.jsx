@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import OptimizedImage from '../../components/OptimizedImage';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export async function getStaticProps({ locale }) {
@@ -70,9 +71,11 @@ const TodoPage = () => {
                 </ul>
               </div>
               <div className="bg-white rounded-[20px] shadow-xl overflow-hidden slide-in-left">
-                <img
-                  src="/sources/6.png"
+                <OptimizedImage
+                  src="/optimized/6.webp"
                   alt="任务管理界面"
+                  width={1080}
+                  height={1920}
                   className="w-full h-auto"
                 />
               </div>

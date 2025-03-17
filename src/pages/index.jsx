@@ -50,11 +50,8 @@ export default function Home({ locale }) {
   // Force set language if received from props
   useEffect(() => {
     if (locale && i18n.language !== locale) {
-      console.log(`Setting language from props: ${locale}`);
-      i18n.changeLanguage(locale).then(() => {
-        console.log(`Home component: Language successfully changed to: ${locale}`);
-      }).catch(error => {
-        console.error(`Home component: Error changing language: ${error}`);
+      i18n.changeLanguage(locale).catch(error => {
+        console.error(`Error changing language: ${error}`);
       });
     }
   }, [locale, i18n]);
@@ -64,7 +61,7 @@ export default function Home({ locale }) {
       {/* 全局鲸鱼背景纹理 - 以更低的透明度应用于整个页面 */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]" 
         style={{ 
-          backgroundImage: "url('/sources/鲸鱼背景.png')",
+          backgroundImage: "url('/optimized/鲸鱼背景.webp')",
           backgroundSize: "800px auto",
           backgroundPosition: "center",
           backgroundRepeat: "repeat"

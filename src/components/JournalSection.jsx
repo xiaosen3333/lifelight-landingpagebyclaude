@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import OptimizedImage from './OptimizedImage';
 
 const JournalSection = () => {
   const { t } = useTranslation('common');
@@ -18,16 +19,17 @@ const JournalSection = () => {
           <div className="order-2 md:order-1 md:col-span-3 slide-in-left">
             <div className="relative">
               <div className="bg-white rounded-[20px] shadow-xl overflow-hidden transform transition-transform hover:scale-[1.02] duration-300">
-                <img
-                  src="/sources/6.png"
+                <OptimizedImage
+                  src="/optimized/6.webp"
                   alt={t('journal.imageAlt')}
+                  width={1080}
+                  height={1920}
                   className="w-full h-auto object-cover"
-                  loading="lazy"
                 />
               </div>
 
               <div className="absolute -bottom-5 -right-5 p-4 glass-effect rounded-xl shadow-lg z-10 animate-wiggle">
-                <img src="/sources/image 46.png" alt={t('journal.emojiAlt')} className="w-10 h-10" />
+                <OptimizedImage src="/optimized/image 46.webp" alt={t('journal.emojiAlt')} width={40} height={40} className="w-10 h-10" />
               </div>
 
               {/* Quote bubble */}

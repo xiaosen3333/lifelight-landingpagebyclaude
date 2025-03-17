@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import OptimizedImage from './OptimizedImage';
 import { useRouter } from 'next/router';
 
 const CompanionSection = () => {
@@ -33,16 +34,17 @@ const CompanionSection = () => {
           <div className="md:col-span-3 slide-in-left">
             <div className="relative">
               <div className="bg-white rounded-[20px] shadow-xl overflow-hidden transform transition-transform hover:scale-[1.02] duration-300">
-                <img
-                  src="/sources/3.png"
+                <OptimizedImage
+                  src="/optimized/3.webp"
                   alt={t('companion.title')}
+                  width={1080}
+                  height={1920}
                   className="w-full h-auto object-cover"
-                  loading="lazy"
                 />
               </div>
 
               <div className="absolute -top-5 -left-5 p-4 glass-effect rounded-xl shadow-lg z-10 animate-bounce-gentle">
-                <img src="/sources/image 47.png" alt="Companion Emoji" className="w-10 h-10" />
+                <OptimizedImage src="/optimized/image 47.webp" alt="Companion Emoji" width={40} height={40} className="w-10 h-10" />
               </div>
 
               <div className="absolute top-1/2 -right-5 p-4 glass-effect rounded-xl shadow-lg z-10 hover:shadow-rose-pink/30 transition-shadow animate-float delay-300 group">

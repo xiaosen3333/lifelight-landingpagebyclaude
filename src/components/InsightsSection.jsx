@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import OptimizedImage from './OptimizedImage';
 
 const InsightsSection = () => {
   const { t } = useTranslation('common');
@@ -30,16 +31,17 @@ const InsightsSection = () => {
           <div className="md:col-span-3 slide-in-left">
             <div className="relative">
               <div className="bg-white rounded-[20px] shadow-xl overflow-hidden transform transition-transform hover:scale-[1.02] duration-300">
-                <img
-                  src="/sources/5.png"
+                <OptimizedImage
+                  src="/optimized/5.webp"
                   alt="Insights Feature Screenshot"
+                  width={1080}
+                  height={1920}
                   className="w-full h-auto object-cover"
-                  loading="lazy"
                 />
               </div>
 
               <div className="absolute -top-5 -right-5 p-4 glass-effect rounded-xl shadow-lg z-10 animate-bounce-gentle">
-                <img src="/sources/image 49.png" alt="Insights Emoji" className="w-10 h-10" />
+                <OptimizedImage src="/optimized/image 49.webp" alt="Insights Emoji" width={40} height={40} className="w-10 h-10" />
               </div>
 
               <div className="absolute bottom-10 -left-5 p-4 glass-effect rounded-xl shadow-lg z-10 hover:shadow-space-purple/30 transition-shadow animate-float delay-100 group">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import OptimizedImage from './OptimizedImage';
 
 const GallerySection = () => {
   const { t } = useTranslation('common');
@@ -11,16 +12,17 @@ const GallerySection = () => {
           <div className="order-2 md:order-1 md:col-span-3 slide-in-left">
             <div className="relative">
               <div className="bg-white rounded-[20px] shadow-xl overflow-hidden transform transition-transform hover:scale-[1.02] duration-300">
-                <img
-                  src="/sources/4.png"
+                <OptimizedImage
+                  src="/optimized/4.webp"
                   alt={t('gallery.imageAlt')}
+                  width={1080}
+                  height={1920}
                   className="w-full h-auto object-cover"
-                  loading="lazy"
                 />
               </div>
 
               <div className="absolute -bottom-5 -left-5 p-4 glass-effect rounded-xl shadow-lg z-10 animate-wiggle">
-                <img src="/sources/image 48.png" alt={t('gallery.emojiAlt')} className="w-10 h-10" />
+                <OptimizedImage src="/optimized/image 48.webp" alt={t('gallery.emojiAlt')} width={40} height={40} className="w-10 h-10" />
               </div>
 
               <div className="absolute -top-5 right-10 p-4 glass-effect rounded-xl shadow-lg z-10 flex items-center space-x-2 hover:shadow-mint-blue/30 transition-shadow animate-bounce-gentle delay-500 group">

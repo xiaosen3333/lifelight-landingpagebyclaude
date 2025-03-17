@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import OptimizedImage from './OptimizedImage';
 
 const HeroSection = () => {
   const { t } = useTranslation('common');
@@ -60,11 +61,14 @@ const HeroSection = () => {
         <div className="md:col-span-7 relative slide-in-right">
           {/* Main device image with enhanced styling */}
           <div className="relative z-10 mx-auto transform transition-all hover:scale-[1.02] duration-300 hover:rotate-1">
-            <img
-              src="/sources/2.png"
+            <OptimizedImage
+              src="/optimized/2.webp"
               alt="Lifelight App Screenshot"
+              width={1080}
+              height={1920}
               className="mx-auto max-w-full rounded-[20px] shadow-2xl"
-              loading="lazy"
+              priority={true}
+              quality={85}
             />
 
             {/* Subtle device frame/overlay */}

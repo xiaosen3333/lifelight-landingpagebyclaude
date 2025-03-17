@@ -1,4 +1,5 @@
 import React from 'react';
+import OptimizedImage from './OptimizedImage';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 
@@ -111,9 +112,11 @@ const TestimonialsSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <img
-                  src={testimonial.avatar}
+                <OptimizedImage
+                  src={testimonial.avatar.replace('/sources/', '/optimized/').replace('.png', '.webp')}
                   alt={`${testimonial.name} avatar`}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full mr-4 object-cover"
                 />
                 <div>

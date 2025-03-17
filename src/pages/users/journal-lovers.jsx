@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import OptimizedImage from '../../components/OptimizedImage';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export async function getStaticProps({ locale }) {
@@ -54,9 +55,11 @@ const JournalLoversPage = () => {
               </div>
               <div className="relative slide-in-left">
                 <div className="bg-white rounded-[20px] shadow-xl overflow-hidden">
-                  <img
-                    src="/sources/6.png"
+                  <OptimizedImage
+                    src="/optimized/6.webp"
                     alt="心光记录界面"
+                    width={1080}
+                    height={1920}
                     className="w-full h-auto"
                   />
                 </div>
@@ -144,9 +147,11 @@ const JournalLoversPage = () => {
 
                 <div className="bg-white rounded-[20px] shadow-md p-6 mb-8">
                   <div className="flex items-center mb-4">
-                    <img
-                      src="/sources/未命名作品 3 3.png"
+                    <OptimizedImage
+                      src="/optimized/未命名作品 3 3.webp"
                       alt="Emily's avatar"
+                      width={48}
+                      height={48}
                       className="w-12 h-12 rounded-full mr-4 object-cover"
                     />
                     <div>
@@ -176,23 +181,29 @@ const JournalLoversPage = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white rounded-[20px] shadow-md overflow-hidden">
-                  <img
-                    src="/sources/5.png"
+                  <OptimizedImage
+                    src="/optimized/5.webp"
                     alt="记录日历视图"
+                    width={1080}
+                    height={1920}
                     className="w-full h-auto"
                   />
                 </div>
                 <div className="bg-white rounded-[20px] shadow-md overflow-hidden">
-                  <img
-                    src="/sources/4.png"
+                  <OptimizedImage
+                    src="/optimized/4.webp"
                     alt="带情绪追踪的记录条目"
+                    width={1080}
+                    height={1920}
                     className="w-full h-auto"
                   />
                 </div>
                 <div className="bg-white rounded-[20px] shadow-md overflow-hidden col-span-2">
-                  <img
-                    src="/sources/3.png"
+                  <OptimizedImage
+                    src="/optimized/3.webp"
                     alt="来自记录的AI洞察"
+                    width={1080}
+                    height={1920}
                     className="w-full h-auto"
                   />
                 </div>
