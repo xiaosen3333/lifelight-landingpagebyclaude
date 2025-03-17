@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="md:col-span-5 slide-in-left relative z-10">
           <div className="relative">
             {/* Decorative badge */}
-            <div className="absolute -top-6 -left-6 glass-effect text-gradient-rose px-4 py-1 rounded-full text-sm font-bold shadow-lg animate-bounce-gentle transform rotate-[-5deg]">
+            <div className="absolute -top-5 -left-6 glass-effect text-gradient-rose px-4 py-1 rounded-full text-sm font-bold shadow-lg animate-bounce-gentle transform rotate-[-5deg]">
               AI + {t('header.journal')}
             </div>
 
