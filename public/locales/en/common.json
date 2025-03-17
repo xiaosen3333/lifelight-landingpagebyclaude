@@ -3,6 +3,33 @@
     "title": "Lifelight - Your AI Life-Recording Companion",
     "description": "Lifelight is an AI life-recording companion that helps you capture life moments, express feelings, and understand your emotional journey."
   },
+  "problem": {
+    "title": "Modern life is complex, <span class=\"text-gradient-primary\">emotions are often lost</span>",
+    "subtitle": "Many of us struggle to track our emotional journeys and find meaningful connections in today's fast-paced world",
+    "points": [
+      {
+        "title": "Emotional Disconnect",
+        "description": "In a digital world, we're increasingly disconnected from our emotions and personal growth. Traditional journaling requires discipline many can't maintain.",
+        "icon": "💔"
+      },
+      {
+        "title": "Information Overload",
+        "description": "We capture countless photos and notes but rarely organize them in meaningful ways that help us understand ourselves better over time.",
+        "icon": "🔍"
+      },
+      {
+        "title": "Limited Self-Knowledge",
+        "description": "Without proper emotional tracking, many miss valuable insights about their behavioral patterns, triggers, and relationships.",
+        "icon": "🧠"
+      },
+      {
+        "title": "Emotional Support Gap",
+        "description": "While social media provides connection, it often lacks the deep emotional understanding and private reflection we need.",
+        "icon": "🤔"
+      }
+    ],
+    "solution": "Lifelight bridges these gaps by combining journaling, AI companionship, and emotional analytics in one seamless experience."
+  },
   "todo": {
     "meta": {
       "title": "Todo Feature | Lifelight",
