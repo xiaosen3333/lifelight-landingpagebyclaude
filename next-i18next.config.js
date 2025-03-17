@@ -23,5 +23,9 @@ module.exports = {
   detection: {
     order: ['path', 'htmlTag', 'cookie', 'header'],
     caches: ['cookie'],
-  }
+  },
+  
+  // Ensure arrays in translations are properly handled
+  returnObjects: true,
+  returnEmptyString: false
 };

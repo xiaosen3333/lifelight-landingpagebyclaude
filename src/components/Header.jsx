@@ -79,16 +79,13 @@ const Header = () => {
             <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
               <div className="py-1">
                 <Link href="/product/todo" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  {t('header.journal')}
+                  {t('header.todo')}
                 </Link>
                 <Link href="/product/all-in-one" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  {t('header.companion')}
+                  {t('header.allinone')}
                 </Link>
                 <Link href="/product/ai-friend" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  {t('header.gallery')}
-                </Link>
-                <Link href="/product/ai-friend" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  {t('header.insights')}
+                  {t('header.aifriend')}
                 </Link>
               </div>
             </div>
@@ -229,16 +226,13 @@ const Header = () => {
                 <div className="font-medium text-gray-800 mb-2">{t('header.product')}</div>
                 <div className="pl-4 flex flex-col space-y-2">
                   <Link href="/product/todo" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    {t('header.journal')}
+                    {t('header.todo')}
                   </Link>
                   <Link href="/product/all-in-one" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    {t('header.companion')}
+                    {t('header.allinone')}
                   </Link>
                   <Link href="/product/ai-friend" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    {t('header.gallery')}
-                  </Link>
-                  <Link href="/product/ai-friend" className="text-sm text-gray-700" onClick={() => setIsMobileMenuOpen(false)}>
-                    {t('header.insights')}
+                    {t('header.aifriend')}
                   </Link>
                 </div>
               </div>

@@ -3,6 +3,7 @@ import { appWithTranslation, useTranslation } from 'next-i18next';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Script from 'next/script';
 // Import i18n config directly
 const nextI18NextConfig = require('../../next-i18next.config.js');
 
@@ -41,19 +42,19 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        {/* Add fonts from design guidelines - SF Pro, New York, and Source Han Serif CN */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
         {/* Prevent caching issues with translations */}
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
         {/* Set language in meta */}
         <meta httpEquiv="Content-Language" content={router.locale} />
-        {/* Debug info */}
-        <script dangerouslySetInnerHTML={{ __html: `console.log('App loaded with locale: ${router.locale}')` }}></script>
       </Head>
+      
+      {/* Debug info */}
+      <Script id="locale-debug" strategy="afterInteractive">
+        {`console.log('App loaded with locale: ${router.locale}')`}
+      </Script>
+      
       <Component {...pageProps} />
     </>
   );

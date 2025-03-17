@@ -3,6 +3,276 @@
     "title": "心光 - 你的AI生活记录伴侣",
     "description": "心光是一款AI生活记录伴侣，帮助你捕捉生活瞬间，表达感受，并理解你的情感旅程。"
   },
+  "todo": {
+    "meta": {
+      "title": "待办功能 | 心光",
+      "description": "了解心光如何帮助您有效组织任务和管理日常待办事项。"
+    },
+    "heading": "更智能的方式来 <span class=\"text-primary-color\">组织任务</span>",
+    "subheading": "心光的待办功能帮助您捕捉任务，组织优先事项，并跟踪您的承诺。",
+    "sections": {
+      "contextual": {
+        "title": "带有情感上下文的任务捕捉",
+        "description": "与标准待办应用不同，心光帮助您捕捉不仅是需要完成的事项，还包括您对它的感受。这种情感上下文帮助您更好地理解您的生产力模式，并优先考虑与您的幸福相符的任务。",
+        "features": [
+          "记录每个任务旁边的情感状态",
+          "基于个人影响而非仅紧急性设置优先级",
+          "追踪不同任务如何随时间影响您的情绪",
+          "接收任务调度的个性化建议"
+        ],
+        "imageAlt": "任务管理界面"
+      },
+      "ai": {
+        "title": "适应您需求的智能功能",
+        "description": "我们的AI驱动任务管理系统从您的模式和偏好中学习，提供真正个性化的体验。",
+        "features": [
+          {
+            "title": "AI任务优先级",
+            "icon": "🧠",
+            "description": "让我们的AI分析您的任务并根据您的能量水平、截止日期和情感状态建议最佳顺序。"
+          },
+          {
+            "title": "情绪感知调度",
+            "icon": "🌈",
+            "description": "根据您一天中典型的能量模式安排任务，帮助您将困难任务与您的最佳表现时间匹配。"
+          },
+          {
+            "title": "与记录集成",
+            "icon": "📔",
+            "description": "将您的任务直接与记录条目连接，捕捉关于已完成任务的反思并记录您的进度。"
+          }
+        ],
+        "ctaText": "体验心光的任务管理"
+      }
+    }
+  },
+  "journalLovers": {
+    "meta": {
+      "title": "心光，为热爱记录的你 | 增强记录体验的AI伴侣",
+      "description": "通过心光提升您的记录体验。了解我们的AI伴侣如何帮助您表达情感，追踪模式，并从您的记录中获得更深洞察。"
+    },
+    "hero": {
+      "title": "为热爱 <span class=\"text-gradient-primary\">记录</span> 的你",
+      "description": "心光将您的记录提升到新的水平，通过AI提供的洞察、精美的组织和情感智能，理解您文字背后的深层含义。",
+      "exploreBtn": "探索记录功能",
+      "startBtn": "立即开始记录",
+      "interface": "心光记录界面",
+      "caption": {
+        "line1": "捕捉感受",
+        "line2": "带有深度和上下文"
+      }
+    },
+    "features": {
+      "title": "你会喜欢的记录功能",
+      "description": "心光将传统的记录实践与现代AI技术相结合，创造出独特而有洞察力的体验。",
+      "items": [
+        {
+          "title": "丰富媒体条目",
+          "icon": "📝",
+          "description": "结合文字、照片、语音笔记和位置标签，创建丰富、有上下文的记录条目，全面捕捉瞬间的精髓。",
+          "color": "primary-color"
+        },
+        {
+          "title": "情绪追踪",
+          "icon": "🌈",
+          "description": "为条目标记情绪，或让我们的AI检测你写作的情感语调，帮助你追踪情感景观随时间的变化模式。",
+          "color": "rose-pink"
+        },
+        {
+          "title": "智能提示",
+          "icon": "💡",
+          "description": "不再面对空白页的焦虑。我们的AI根据你过去的条目、当前事件或情感模式提供个性化的提示。",
+          "color": "mint-blue"
+        },
+        {
+          "title": "精美组织",
+          "icon": "📚",
+          "description": "使用智能标签自动分类条目，按情绪或主题搜索，并将你的记录查看为时间线、日历或情绪板。",
+          "color": "space-purple"
+        },
+        {
+          "title": "AI洞察",
+          "icon": "🔍",
+          "description": "接收关于模式、成长机会和记录实践中重复主题的深思熟虑的洞察。",
+          "color": "primary-color"
+        },
+        {
+          "title": "隐私优先",
+          "icon": "🔒",
+          "description": "你的记录是私密且安全的。所有条目都经过加密，你可以控制谁（如果有人）能看到你的想法。",
+          "color": "rose-pink"
+        }
+      ]
+    },
+    "testimonial": {
+      "badge": "记录爱好者的故事",
+      "title": "来自一位记录爱好者",
+      "userName": "李小雨",
+      "userExperience": "记录12年+",
+      "quote": "\"多年来，我已经填满了数十本实体记录本，但心光彻底改变了我的记录习惯。AI洞察帮助我看到以前从未注意到的模式，情绪追踪对我的自我意识产生了革命性的影响。我仍然保留实体记录本，但心光已经成为我写作实践中不可或缺的伴侣。\"",
+      "benefits": [
+        "发现了以前未认识到的情绪模式",
+        "在每日散步时使用语音笔记进行随时记录",
+        "喜欢记录和伴侣功能如何相互补充",
+        "通过回顾年度反思发现新的洞察"
+      ],
+      "gallery": {
+        "calendarAlt": "记录日历视图",
+        "emotionAlt": "带情绪追踪的记录条目",
+        "insightsAlt": "来自记录的AI洞察"
+      }
+    },
+    "cta": {
+      "title": "准备好提升你的记录体验了吗？",
+      "description": "加入数千名已经通过心光将他们的记录实践提升到新水平的记录爱好者。",
+      "buttonText": "开始你的记录之旅"
+    }
+  },
+  "downloadPage": {
+    "meta": {
+      "title": "下载心光 | 你的AI生活记录伴侣",
+      "description": "下载心光应用，适用于iOS和安卓设备。今天就开始捕捉生活瞬间，表达感受，理解你的情感旅程。"
+    },
+    "title": "下载 <span class=\"text-gradient-primary\">心光</span> 应用",
+    "subtitle": "开始你的情感旅程，心光应用适用于iOS和安卓设备。",
+    "stats": {
+      "downloads": "下载量",
+      "rating": "App Store评分",
+      "countries": "国家/地区"
+    },
+    "guide": {
+      "title": "使用指南",
+      "steps": [
+        {
+          "title": "下载应用",
+          "description": "从App Store或Google Play商店获取心光应用"
+        },
+        {
+          "title": "创建个人资料",
+          "description": "设置您的个人资料并自定义您的体验"
+        },
+        {
+          "title": "开始您的旅程",
+          "description": "开始记录生活瞬间并与您的AI伴侣建立联系"
+        }
+      ]
+    },
+    "requirements": {
+      "title": "兼容性与系统要求",
+      "ios": {
+        "title": "iOS",
+        "specs": [
+          "iOS 14.0或更高版本",
+          "兼容iPhone、iPad和iPod touch",
+          "需要200 MB可用空间",
+          "AI功能需要互联网连接"
+        ]
+      },
+      "android": {
+        "title": "Android",
+        "specs": [
+          "Android 8.0或更高版本",
+          "ARMv8处理器或更高版本",
+          "需要250 MB可用空间",
+          "AI功能需要互联网连接"
+        ]
+      }
+    },
+    "appStore": {
+      "download": "Download on the",
+      "name": "App Store"
+    },
+    "googlePlay": {
+      "download": "GET IT ON",
+      "name": "Google Play"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "定价 | 心光",
+      "description": "为您的情感旅程选择完美的心光计划。从免费基本功能到高级计划，提供高级AI伴侣和洞察。"
+    },
+    "title": "选择您的 <span class=\"text-gradient-primary\">情感旅程</span>",
+    "subtitle": "选择适合您需求的计划。所有计划均提供14天免费试用。",
+    "plans": [
+      {
+        "name": "免费版",
+        "price": "0",
+        "description": "开始情感旅程的基本功能",
+        "features": [
+          "每日记录（每天限5条）",
+          "基本AI伴侣互动",
+          "简单情绪追踪",
+          "7天情绪历史"
+        ],
+        "button": "开始使用",
+        "color": "gray",
+        "popular": false
+      },
+      {
+        "name": "高级版",
+        "price": "9.99",
+        "description": "更深入的情感洞察增强功能",
+        "features": [
+          "无限记录条目",
+          "高级AI伴侣，可定制性格",
+          "详细情绪分析和洞察",
+          "完整情绪历史和模式",
+          "导出和备份选项",
+          "无广告体验"
+        ],
+        "button": "开始免费试用",
+        "color": "primary-color",
+        "popular": true
+      },
+      {
+        "name": "家庭版",
+        "price": "19.99",
+        "description": "与您的亲人共享情感旅程",
+        "features": [
+          "包含高级版的所有功能",
+          "最多5个家庭成员",
+          "家庭洞察和联系",
+          "共享时刻和记忆",
+          "家庭情感模式",
+          "优先支持"
+        ],
+        "button": "获取家庭计划",
+        "color": "rose-pink",
+        "popular": false
+      }
+    ],
+    "popular": "最受欢迎",
+    "perMonth": "/月",
+    "features": "功能：",
+    "faqs": {
+      "title": "常见问题",
+      "questions": [
+        {
+          "question": "免费试用如何运作？",
+          "answer": "我们的14天免费试用提供高级版的所有功能。试用期结束前不会收费，您可以随时取消。"
+        },
+        {
+          "question": "我可以在不同计划间切换吗？",
+          "answer": "是的，您可以随时升级或降级您的计划。如果升级，将会收取按比例计算的差额。如果降级，您的新费率将在下一个计费周期开始应用。"
+        },
+        {
+          "question": "我的数据是否私密？",
+          "answer": "绝对是。您的隐私是我们的首要任务。您所有的日记条目和情感数据都经过加密并安全存储。我们永远不会与第三方共享您的个人信息。您可以随时导出或删除您的数据。"
+        },
+        {
+          "question": "您接受哪些支付方式？",
+          "answer": "我们接受所有主要信用卡、PayPal和Apple Pay。所有支付都通过我们的支付合作伙伴安全处理。"
+        },
+        {
+          "question": "我可以取消订阅吗？",
+          "answer": "是的，您可以随时从账户设置中取消订阅。如果取消，您仍然可以使用您的高级功能，直到当前计费周期结束。"
+        }
+      ],
+      "moreQuestions": "还有问题？",
+      "contactSupport": "联系客服"
+    }
+  },
   "header": {
     "features": "功能",
     "journal": "记录",
@@ -11,6 +281,9 @@
     "insights": "洞见",
     "download": "下载",
     "product": "产品",
+    "todo": "待办",
+    "allinone": "多合一",
+    "aifriend": "AI伙伴",
     "users": "用户",
     "docs": "文档",
     "gettingStarted": "入门指南",

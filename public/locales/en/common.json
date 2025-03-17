@@ -3,6 +3,276 @@
     "title": "Lifelight - Your AI Life-Recording Companion",
     "description": "Lifelight is an AI life-recording companion that helps you capture life moments, express feelings, and understand your emotional journey."
   },
+  "todo": {
+    "meta": {
+      "title": "Todo Feature | Lifelight",
+      "description": "Learn how Lifelight helps you effectively organize tasks and manage your daily to-dos."
+    },
+    "heading": "A Smarter Way to <span class=\"text-primary-color\">Organize Tasks</span>",
+    "subheading": "Lifelight's todo feature helps you capture tasks, organize priorities, and track your commitments.",
+    "sections": {
+      "contextual": {
+        "title": "Task Capture with Emotional Context",
+        "description": "Unlike standard todo apps, Lifelight helps you capture not just what needs to be done, but how you feel about it. This emotional context helps you better understand your productivity patterns and prioritize tasks that align with your wellbeing.",
+        "features": [
+          "Record emotional states alongside each task",
+          "Set priorities based on personal impact rather than just urgency",
+          "Track how different tasks affect your mood over time",
+          "Receive personalized recommendations for task scheduling"
+        ],
+        "imageAlt": "Task management interface"
+      },
+      "ai": {
+        "title": "Intelligent Features that Adapt to Your Needs",
+        "description": "Our AI-driven task management system learns from your patterns and preferences to deliver a truly personalized experience.",
+        "features": [
+          {
+            "title": "AI Task Prioritization",
+            "icon": "🧠",
+            "description": "Let our AI analyze your tasks and suggest the optimal order based on your energy levels, deadlines, and emotional state."
+          },
+          {
+            "title": "Emotion-Aware Scheduling",
+            "icon": "🌈",
+            "description": "Schedule tasks according to your typical energy patterns throughout the day, helping you match difficult tasks with your peak performance times."
+          },
+          {
+            "title": "Journal Integration",
+            "icon": "📔",
+            "description": "Connect your tasks directly to journal entries, capturing reflections on completed tasks and documenting your progress."
+          }
+        ],
+        "ctaText": "Experience Lifelight's Task Management"
+      }
+    }
+  },
+  "journalLovers": {
+    "meta": {
+      "title": "Lifelight for Journal Enthusiasts | AI Companion to Enhance Your Journaling",
+      "description": "Elevate your journaling experience with Lifelight. Discover how our AI companion helps you express emotions, track patterns, and gain deeper insights from your journals."
+    },
+    "hero": {
+      "title": "For Those Who Love <span class=\"text-gradient-primary\">Journaling</span>",
+      "description": "Lifelight elevates your journaling to new heights with AI-powered insights, beautiful organization, and emotional intelligence that understands the deeper meanings behind your words.",
+      "exploreBtn": "Explore Journal Features",
+      "startBtn": "Start Journaling Now",
+      "interface": "Lifelight Journal Interface",
+      "caption": {
+        "line1": "Capture feelings",
+        "line2": "with depth and context"
+      }
+    },
+    "features": {
+      "title": "Journal Features You'll Love",
+      "description": "Lifelight combines traditional journaling practices with modern AI technology to create a unique and insightful experience.",
+      "items": [
+        {
+          "title": "Rich Media Entries",
+          "icon": "📝",
+          "description": "Combine text, photos, voice notes, and location tags to create rich, contextual journal entries that fully capture the essence of moments.",
+          "color": "primary-color"
+        },
+        {
+          "title": "Emotion Tracking",
+          "icon": "🌈",
+          "description": "Tag entries with emotions or let our AI detect the emotional tone of your writing, helping you track patterns in your emotional landscape over time.",
+          "color": "rose-pink"
+        },
+        {
+          "title": "Smart Prompts",
+          "icon": "💡",
+          "description": "Never face the anxiety of a blank page again. Our AI provides personalized prompts based on your past entries, current events, or emotional patterns.",
+          "color": "mint-blue"
+        },
+        {
+          "title": "Beautiful Organization",
+          "icon": "📚",
+          "description": "Automatically categorize entries with smart tags, search by emotion or topic, and view your journals as timelines, calendars, or mood boards.",
+          "color": "space-purple"
+        },
+        {
+          "title": "AI Insights",
+          "icon": "🔍",
+          "description": "Receive thoughtful insights about patterns, growth opportunities, and recurring themes in your journaling practice.",
+          "color": "primary-color"
+        },
+        {
+          "title": "Privacy First",
+          "icon": "🔒",
+          "description": "Your journals are private and secure. All entries are encrypted, and you control who (if anyone) can see your thoughts.",
+          "color": "rose-pink"
+        }
+      ]
+    },
+    "testimonial": {
+      "badge": "Journal Enthusiast Story",
+      "title": "From a Fellow Journaler",
+      "userName": "Emily Chen",
+      "userExperience": "Journaling for 12+ years",
+      "quote": "\"Over the years, I've filled dozens of physical journals, but Lifelight has completely transformed my journaling habits. The AI insights help me see patterns I never noticed before, and the emotion tracking has revolutionized my self-awareness. I still keep physical journals, but Lifelight has become an indispensable companion to my writing practice.\"",
+      "benefits": [
+        "Discovered emotional patterns she hadn't recognized",
+        "Uses voice notes for on-the-go journaling during daily walks",
+        "Loves how journal and companion features complement each other",
+        "Finds new insights through year-in-review reflections"
+      ],
+      "gallery": {
+        "calendarAlt": "Journal calendar view",
+        "emotionAlt": "Journal entry with emotion tracking",
+        "insightsAlt": "AI insights from journaling"
+      }
+    },
+    "cta": {
+      "title": "Ready to Elevate Your Journaling Experience?",
+      "description": "Join thousands of journal enthusiasts who have already taken their journaling practice to new heights with Lifelight.",
+      "buttonText": "Start Your Journaling Journey"
+    }
+  },
+  "downloadPage": {
+    "meta": {
+      "title": "Download Lifelight | Your AI Life-Recording Companion",
+      "description": "Download the Lifelight app for iOS and Android devices. Start capturing life moments, expressing feelings, and understanding your emotional journey today."
+    },
+    "title": "Download <span class=\"text-gradient-primary\">Lifelight</span> App",
+    "subtitle": "Start your emotional journey with the Lifelight app, available for iOS and Android devices.",
+    "stats": {
+      "downloads": "Downloads",
+      "rating": "App Store Rating",
+      "countries": "Countries"
+    },
+    "guide": {
+      "title": "User Guide",
+      "steps": [
+        {
+          "title": "Download the App",
+          "description": "Get the Lifelight app from the App Store or Google Play Store"
+        },
+        {
+          "title": "Create Your Profile",
+          "description": "Set up your profile and customize your experience"
+        },
+        {
+          "title": "Begin Your Journey",
+          "description": "Start recording life moments and connect with your AI companion"
+        }
+      ]
+    },
+    "requirements": {
+      "title": "Compatibility & System Requirements",
+      "ios": {
+        "title": "iOS",
+        "specs": [
+          "iOS 14.0 or higher",
+          "Compatible with iPhone, iPad, and iPod touch",
+          "200 MB available space needed",
+          "Internet connection required for AI features"
+        ]
+      },
+      "android": {
+        "title": "Android",
+        "specs": [
+          "Android 8.0 or higher",
+          "ARMv8 processor or newer",
+          "250 MB available space needed",
+          "Internet connection required for AI features"
+        ]
+      }
+    },
+    "appStore": {
+      "download": "Download on the",
+      "name": "App Store"
+    },
+    "googlePlay": {
+      "download": "GET IT ON",
+      "name": "Google Play"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing | Lifelight",
+      "description": "Choose the perfect Lifelight plan for your emotional journey. From free basic features to premium plans with advanced AI companionship and insights."
+    },
+    "title": "Choose Your <span class=\"text-gradient-primary\">Emotional Journey</span>",
+    "subtitle": "Select a plan that fits your needs. All plans come with a 14-day free trial.",
+    "plans": [
+      {
+        "name": "Free",
+        "price": "0",
+        "description": "Basic features to start your emotional journey",
+        "features": [
+          "Daily journaling (limit 5 entries/day)",
+          "Basic AI companion interactions",
+          "Simple emotion tracking",
+          "7-day emotion history"
+        ],
+        "button": "Get Started",
+        "color": "gray",
+        "popular": false
+      },
+      {
+        "name": "Premium",
+        "price": "9.99",
+        "description": "Enhanced features for deeper emotional insights",
+        "features": [
+          "Unlimited journal entries",
+          "Advanced AI companion with customizable personality",
+          "Detailed emotion analysis and insights",
+          "Full emotion history and patterns",
+          "Export and backup options",
+          "Ad-free experience"
+        ],
+        "button": "Start Free Trial",
+        "color": "primary-color",
+        "popular": true
+      },
+      {
+        "name": "Family",
+        "price": "19.99",
+        "description": "Share your emotional journey with your loved ones",
+        "features": [
+          "All Premium features included",
+          "Up to 5 family members",
+          "Family insights and connections",
+          "Shared moments and memories",
+          "Family emotion patterns",
+          "Priority support"
+        ],
+        "button": "Get Family Plan",
+        "color": "rose-pink",
+        "popular": false
+      }
+    ],
+    "popular": "Most Popular",
+    "perMonth": "/month",
+    "features": "Features:",
+    "faqs": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How does the free trial work?",
+          "answer": "Our 14-day free trial gives you access to all Premium features. You won't be charged until the trial period ends, and you can cancel anytime."
+        },
+        {
+          "question": "Can I switch between plans?",
+          "answer": "Yes, you can upgrade or downgrade your plan at any time. If you upgrade, you'll be charged the prorated difference. If you downgrade, your new rate will apply at the start of your next billing cycle."
+        },
+        {
+          "question": "Is my data private?",
+          "answer": "Absolutely. Your privacy is our top priority. All your journal entries and emotional data are encrypted and securely stored. We never share your personal information with third parties. You can export or delete your data at any time."
+        },
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept all major credit cards, PayPal, and Apple Pay. All payments are securely processed through our payment partners."
+        },
+        {
+          "question": "Can I cancel my subscription?",
+          "answer": "Yes, you can cancel your subscription anytime from your account settings. If you cancel, you'll still be able to use your premium features until the end of your current billing cycle."
+        }
+      ],
+      "moreQuestions": "Still have questions?",
+      "contactSupport": "Contact Support"
+    }
+  },
   "header": {
     "features": "Features",
     "journal": "Journal",
@@ -11,6 +281,9 @@
     "insights": "Insights",
     "download": "Download",
     "product": "Product",
+    "todo": "Todo",
+    "allinone": "All-in-One",
+    "aifriend": "AI Friend",
     "users": "Users",
     "docs": "Docs",
     "gettingStarted": "Getting Started",

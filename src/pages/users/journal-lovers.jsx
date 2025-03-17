@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import OptimizedImage from '../../components/OptimizedImage';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export async function getStaticProps({ locale }) {
   return {
@@ -14,11 +15,21 @@ export async function getStaticProps({ locale }) {
 }
 
 const JournalLoversPage = () => {
+  const { t } = useTranslation('common');
   return (
-    <div className="min-h-screen flex flex-col bg-bg-gray">
+    <div className="min-h-screen flex flex-col bg-bg-gray relative">
+      {/* 全局鲸鱼背景纹理 - 以更低的透明度应用于整个页面 */}
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]" 
+        style={{ 
+          backgroundImage: "url('/optimized/鲸鱼背景.webp')",
+          backgroundSize: "800px auto",
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat"
+        }}>
+      </div>
       <Head>
-        <title>心光，为热爱记录的你 | 增强记录体验的AI伴侣</title>
-        <meta name="description" content="通过心光提升您的记录体验。了解我们的AI伴侣如何帮助您表达情感，追踪模式，并从您的记录中获得更深洞察。" />
+        <title>{t('journalLovers.meta.title')}</title>
+        <meta name="description" content={t('journalLovers.meta.description')} />
         <link rel="icon" href="/favicon.ico" />
         {/* Add fonts to match design guidelines */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,18 +49,16 @@ const JournalLoversPage = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="slide-in-right">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  为热爱 <span className="text-gradient-primary">记录</span> 的你
-                </h1>
+                <h1 className="text-4xl md:text-5xl font-bold mb-6" dangerouslySetInnerHTML={{ __html: t('journalLovers.hero.title') }}></h1>
                 <p className="text-xl text-gray-700 mb-8">
-                  心光将您的记录提升到新的水平，通过AI提供的洞察、精美的组织和情感智能，理解您文字背后的深层含义。
+                  {t('journalLovers.hero.description')}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a href="#features" className="btn btn-primary">
-                    探索记录功能
+                    {t('journalLovers.hero.exploreBtn')}
                   </a>
                   <a href="/download" className="btn btn-secondary">
-                    立即开始记录
+                    {t('journalLovers.hero.startBtn')}
                   </a>
                 </div>
               </div>
@@ -57,7 +66,7 @@ const JournalLoversPage = () => {
                 <div className="bg-white rounded-[20px] shadow-xl overflow-hidden">
                   <OptimizedImage
                     src="/optimized/6.webp"
-                    alt="心光记录界面"
+                    alt={t('journalLovers.hero.interface')}
                     width={1080}
                     height={1920}
                     className="w-full h-auto"
@@ -65,8 +74,8 @@ const JournalLoversPage = () => {
                 </div>
                 <div className="absolute -bottom-5 -right-5 p-4 glass-effect rounded-xl shadow-lg">
                   <div className="text-sm font-medium">
-                    <span className="block">捕捉感受</span>
-                    <span className="text-primary-color">带有深度和上下文</span>
+                    <span className="block">{t('journalLovers.hero.caption.line1')}</span>
+                    <span className="text-primary-color">{t('journalLovers.hero.caption.line2')}</span>
                   </div>
                 </div>
               </div>
@@ -77,57 +86,70 @@ const JournalLoversPage = () => {
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">你会喜欢的记录功能</h2>
+              <h2 className="text-3xl font-bold mb-6">{t('journalLovers.features.title')}</h2>
               <p className="text-lg text-gray-700">
-                心光将传统的记录实践与现代AI技术相结合，创造出独特而有洞察力的体验。
+                {t('journalLovers.features.description')}
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "丰富媒体条目",
-                  icon: "📝",
-                  description: "结合文字、照片、语音笔记和位置标签，创建丰富、有上下文的记录条目，全面捕捉瞬间的精髓。",
-                  color: "primary-color"
-                },
-                {
-                  title: "情绪追踪",
-                  icon: "🌈",
-                  description: "为条目标记情绪，或让我们的AI检测你写作的情感语调，帮助你追踪情感景观随时间的变化模式。",
-                  color: "rose-pink"
-                },
-                {
-                  title: "智能提示",
-                  icon: "💡",
-                  description: "不再面对空白页的焦虑。我们的AI根据你过去的条目、当前事件或情感模式提供个性化的提示。",
-                  color: "mint-blue"
-                },
-                {
-                  title: "精美组织",
-                  icon: "📚",
-                  description: "使用智能标签自动分类条目，按情绪或主题搜索，并将你的记录查看为时间线、日历或情绪板。",
-                  color: "space-purple"
-                },
-                {
-                  title: "AI洞察",
-                  icon: "🔍",
-                  description: "接收关于模式、成长机会和记录实践中重复主题的深思熟虑的洞察。",
-                  color: "primary-color"
-                },
-                {
-                  title: "隐私优先",
-                  icon: "🔒",
-                  description: "你的记录是私密且安全的。所有条目都经过加密，你可以控制谁（如果有人）能看到你的想法。",
-                  color: "rose-pink"
-                }
-              ].map((feature, index) => (
+              {Array.isArray(t('journalLovers.features.items', { returnObjects: true }))
+                ? t('journalLovers.features.items', { returnObjects: true }).map((feature, index) => (
                 <div key={index} className="card p-6 transition-transform hover:translate-y-[-5px]">
                   <div className="text-3xl mb-4">{feature.icon}</div>
                   <h3 className={`text-xl font-bold mb-3 text-${feature.color}`}>{feature.title}</h3>
                   <p className="text-gray-700">{feature.description}</p>
                 </div>
-              ))}
+              ))
+                : [
+                  {
+                    title: "丰富媒体条目",
+                    icon: "📝",
+                    description: "结合文字、照片、语音笔记和位置标签，创建丰富、有上下文的记录条目，全面捕捉瞬间的精髓。",
+                    color: "primary-color"
+                  },
+                  {
+                    title: "情绪追踪",
+                    icon: "🌈",
+                    description: "为条目标记情绪，或让我们的AI检测你写作的情感语调，帮助你追踪情感景观随时间的变化模式。",
+                    color: "rose-pink"
+                  },
+                  {
+                    title: "智能提示",
+                    icon: "💡",
+                    description: "不再面对空白页的焦虑。我们的AI根据你过去的条目、当前事件或情感模式提供个性化的提示。",
+                    color: "mint-blue"
+                  },
+                  {
+                    title: "精美组织",
+                    icon: "📚",
+                    description: "使用智能标签自动分类条目，按情绪或主题搜索，并将你的记录查看为时间线、日历或情绪板。",
+                    color: "space-purple"
+                  },
+                  {
+                    title: "AI洞察",
+                    icon: "🔍",
+                    description: "接收关于模式、成长机会和记录实践中重复主题的深思熟虑的洞察。",
+                    color: "primary-color"
+                  },
+                  {
+                    title: "隐私优先",
+                    icon: "🔒",
+                    description: "你的记录是私密且安全的。所有条目都经过加密，你可以控制谁（如果有人）能看到你的想法。",
+                    color: "rose-pink"
+                  }
+                ].map((feature, index) => (
+                  <div key={index} className="card p-6 transition-transform hover:translate-y-[-5px]">
+                    <div className="text-3xl mb-4">{feature.icon}</div>
+                    <h3 className={`text-xl font-bold mb-3 text-${feature.color}`}>
+                      {t(`journalLovers.features.items.${index}.title`) || feature.title}
+                    </h3>
+                    <p className="text-gray-700">
+                      {t(`journalLovers.features.items.${index}.description`) || feature.description}
+                    </p>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </section>
@@ -141,9 +163,9 @@ const JournalLoversPage = () => {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <div className="mb-4 inline-block px-3 py-1 rounded-full bg-primary-color bg-opacity-10 text-primary-color font-medium">
-                  记录爱好者的故事
+                  {t('journalLovers.testimonial.badge')}
                 </div>
-                <h2 className="text-3xl font-bold mb-6">来自一位记录爱好者</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('journalLovers.testimonial.title')}</h2>
 
                 <div className="bg-white rounded-[20px] shadow-md p-6 mb-8">
                   <div className="flex items-center mb-4">
@@ -155,27 +177,35 @@ const JournalLoversPage = () => {
                       className="w-12 h-12 rounded-full mr-4 object-cover"
                     />
                     <div>
-                      <h4 className="font-bold">李小雨</h4>
-                      <p className="text-sm text-gray-500">记录12年+</p>
+                      <h4 className="font-bold">{t('journalLovers.testimonial.userName')}</h4>
+                      <p className="text-sm text-gray-500">{t('journalLovers.testimonial.userExperience')}</p>
                     </div>
                   </div>
                   <p className="text-gray-700 italic mb-4">
-                    "多年来，我已经填满了数十本实体记录本，但心光彻底改变了我的记录习惯。AI洞察帮助我看到以前从未注意到的模式，情绪追踪对我的自我意识产生了革命性的影响。我仍然保留实体记录本，但心光已经成为我写作实践中不可或缺的伴侣。"
+                    {t('journalLovers.testimonial.quote')}
                   </p>
                 </div>
 
                 <ul className="space-y-4">
-                  {[
-                    "发现了以前未认识到的情绪模式",
-                    "在每日散步时使用语音笔记进行随时记录",
-                    "喜欢记录和伴侣功能如何相互补充",
-                    "通过回顾年度反思发现新的洞察"
-                  ].map((item, index) => (
+                  {Array.isArray(t('journalLovers.testimonial.benefits', { returnObjects: true }))
+                    ? t('journalLovers.testimonial.benefits', { returnObjects: true }).map((item, index) => (
                     <li key={index} className="flex items-start">
                       <span className="text-primary-color mr-3 mt-1">✓</span>
                       <span>{item}</span>
                     </li>
-                  ))}
+                  ))
+                    : [
+                      "发现了以前未认识到的情绪模式",
+                      "在每日散步时使用语音笔记进行随时记录",
+                      "喜欢记录和伴侣功能如何相互补充",
+                      "通过回顾年度反思发现新的洞察"
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-primary-color mr-3 mt-1">✓</span>
+                        <span>{t(`journalLovers.testimonial.benefits.${index}`) || item}</span>
+                      </li>
+                    ))
+                  }
                 </ul>
               </div>
 
@@ -183,7 +213,7 @@ const JournalLoversPage = () => {
                 <div className="bg-white rounded-[20px] shadow-md overflow-hidden">
                   <OptimizedImage
                     src="/optimized/5.webp"
-                    alt="记录日历视图"
+                    alt={t('journalLovers.testimonial.gallery.calendarAlt')}
                     width={1080}
                     height={1920}
                     className="w-full h-auto"
@@ -192,7 +222,7 @@ const JournalLoversPage = () => {
                 <div className="bg-white rounded-[20px] shadow-md overflow-hidden">
                   <OptimizedImage
                     src="/optimized/4.webp"
-                    alt="带情绪追踪的记录条目"
+                    alt={t('journalLovers.testimonial.gallery.emotionAlt')}
                     width={1080}
                     height={1920}
                     className="w-full h-auto"
@@ -201,7 +231,7 @@ const JournalLoversPage = () => {
                 <div className="bg-white rounded-[20px] shadow-md overflow-hidden col-span-2">
                   <OptimizedImage
                     src="/optimized/3.webp"
-                    alt="来自记录的AI洞察"
+                    alt={t('journalLovers.testimonial.gallery.insightsAlt')}
                     width={1080}
                     height={1920}
                     className="w-full h-auto"
@@ -219,12 +249,12 @@ const JournalLoversPage = () => {
 
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">准备好提升你的记录体验了吗？</h2>
+              <h2 className="text-3xl font-bold mb-6">{t('journalLovers.cta.title')}</h2>
               <p className="text-xl text-gray-700 mb-10">
-                加入数千名已经通过心光将他们的记录实践提升到新水平的记录爱好者。
+                {t('journalLovers.cta.description')}
               </p>
               <a href="/download" className="btn btn-primary text-lg px-8 py-4">
-                开始你的记录之旅
+                {t('journalLovers.cta.buttonText')}
               </a>
             </div>
           </div>

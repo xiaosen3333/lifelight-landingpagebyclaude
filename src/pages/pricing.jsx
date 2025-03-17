@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export async function getStaticProps({ locale }) {
   return {
@@ -13,13 +14,14 @@ export async function getStaticProps({ locale }) {
 }
 
 const PricingPage = () => {
-  const plans = [
+  const { t } = useTranslation('common');
+  const plans = t('pricing.plans', { returnObjects: true }) || [
     {
       name: "免费版",
       price: "0",
       description: "开始情感旅程的基本功能",
       features: [
-        "每日记录（每天限5条）",
+        "每日记录（每天限5条）", 
         "基本AI伴侣互动",
         "简单情绪追踪",
         "7天情绪历史"
@@ -62,7 +64,7 @@ const PricingPage = () => {
     }
   ];
 
-  const faqs = [
+  const faqs = t('pricing.faqs.questions', { returnObjects: true }) || [
     {
       question: "免费试用如何运作？",
       answer: "我们的14天免费试用提供高级版的所有功能。试用期结束前不会收费，您可以随时取消。"
@@ -86,10 +88,19 @@ const PricingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-bg-gray">
+    <div className="min-h-screen flex flex-col bg-bg-gray relative">
+      {/* 全局鲸鱼背景纹理 - 以更低的透明度应用于整个页面 */}
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.03]" 
+        style={{ 
+          backgroundImage: "url('/optimized/鲸鱼背景.webp')",
+          backgroundSize: "800px auto",
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat"
+        }}>
+      </div>
       <Head>
-        <title>定价 | 心光</title>
-        <meta name="description" content="为您的情感旅程选择完美的心光计划。从免费基本功能到高级计划，提供高级AI伴侣和洞察。" />
+        <title>{t('pricing.meta.title')}</title>
+        <meta name="description" content={t('pricing.meta.description')} />
         <link rel="icon" href="/favicon.ico" />
         {/* Add fonts to match design guidelines */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -108,11 +119,9 @@ const PricingPage = () => {
 
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                选择您的 <span className="text-gradient-primary">情感旅程</span>
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6" dangerouslySetInnerHTML={{ __html: t('pricing.title') }}></h1>
               <p className="text-xl text-gray-700 mb-10">
-                选择适合您需求的计划。所有计划均提供14天免费试用。
+                {t('pricing.subtitle')}
               </p>
             </div>
           </div>
@@ -128,14 +137,14 @@ const PricingPage = () => {
                 >
                   {plan.popular && (
                     <div className={`absolute top-0 right-0 bg-${plan.color} text-white px-4 py-1 rounded-bl-lg font-medium`}>
-                      最受欢迎
+                      {t('pricing.popular')}
                     </div>
                   )}
                   <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                     <div className="flex items-baseline mb-4">
                       <span className="text-4xl font-bold">${plan.price}</span>
-                      <span className="text-gray-600 ml-2">/月</span>
+                      <span className="text-gray-600 ml-2">{t('pricing.perMonth')}</span>
                     </div>
                     <p className="text-gray-600 mb-6">{plan.description}</p>
 
@@ -151,7 +160,7 @@ const PricingPage = () => {
                     </button>
 
                     <div className="mt-8">
-                      <p className="font-medium mb-4">功能：</p>
+                      <p className="font-medium mb-4">{t('pricing.features')}</p>
                       <ul className="space-y-3">
                         {plan.features.map((feature, i) => (
                           <li key={i} className="flex items-start">
@@ -175,7 +184,7 @@ const PricingPage = () => {
 
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">常见问题</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">{t('pricing.faqs.title')}</h2>
 
               <div className="space-y-6">
                 {faqs.map((faq, index) => (
@@ -187,8 +196,8 @@ const PricingPage = () => {
               </div>
 
               <div className="mt-12 text-center">
-                <p className="text-gray-600 mb-6">还有问题？</p>
-                <a href="#" className="btn btn-primary">联系客服</a>
+                <p className="text-gray-600 mb-6">{t('pricing.faqs.moreQuestions')}</p>
+                <a href="#" className="btn btn-primary">{t('pricing.faqs.contactSupport')}</a>
               </div>
             </div>
           </div>
