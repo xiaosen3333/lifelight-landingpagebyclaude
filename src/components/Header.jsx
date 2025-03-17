@@ -19,17 +19,17 @@ const Header = () => {
   const changeLanguage = (locale) => {
     // Close the dropdown menu
     setIsLangMenuOpen(false);
-    
+
     // Use Next.js router for language change instead of direct URL manipulation
     // This ensures proper handling of the locale
     const { pathname, query, asPath } = router;
-    
+
     // Log before changing
     console.log(`Language changing to: ${locale}, current path: ${asPath}`);
-    
+
     // Use router.push to change the locale without a full page reload
     router.push({ pathname, query }, asPath, { locale });
-    
+
     // Log after triggering the change
     console.log(`Router push executed with locale: ${locale}`);
   };
@@ -42,7 +42,7 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -51,7 +51,7 @@ const Header = () => {
         setIsLangMenuOpen(false);
       }
     };
-    
+
     // Add click event listener to document
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
@@ -169,14 +169,14 @@ const Header = () => {
             {t('header.pricing')}
           </Link>
 
-          <Link href="/download" className="btn btn-primary ml-2">
+          {/* <Link href="/download" className="btn btn-primary ml-2">
             {t('header.getApp')}
-          </Link>
-          
+          </Link> */}
+
           {/* Language Switcher */}
           <div className="relative ml-4 lang-switcher">
-            <button 
-              className="flex items-center font-medium text-gray-800 hover:text-primary-color lang-switcher-btn" 
+            <button
+              className="flex items-center font-medium text-gray-800 hover:text-primary-color lang-switcher-btn"
               onClick={(e) => {
                 e.stopPropagation();
                 setIsLangMenuOpen(!isLangMenuOpen);
@@ -187,7 +187,7 @@ const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            
+
             {isLangMenuOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 lang-switcher-dropdown">
                 <div className="py-1">
@@ -198,9 +198,8 @@ const Header = () => {
                         e.stopPropagation();
                         changeLanguage(language.code);
                       }}
-                      className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
-                        router.locale === language.code ? 'text-primary-color font-medium' : 'text-gray-700'
-                      }`}
+                      className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${router.locale === language.code ? 'text-primary-color font-medium' : 'text-gray-700'
+                        }`}
                     >
                       {language.name}
                     </button>
@@ -304,10 +303,10 @@ const Header = () => {
               <Link href="/pricing" className="font-medium hover:text-primary-color transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                 {t('header.pricing')}
               </Link>
-              <Link href="/download" className="btn btn-primary w-full text-center" onClick={() => setIsMobileMenuOpen(false)}>
+              {/* <Link href="/download" className="btn btn-primary w-full text-center" onClick={() => setIsMobileMenuOpen(false)}>
                 {t('header.getApp')}
-              </Link>
-              
+              </Link> */}
+
               {/* Mobile Language Switcher */}
               <div className="border-t pt-4 mt-2 lang-switcher-mobile">
                 <div className="font-medium text-gray-800 mb-2">{t('header.language')}</div>
@@ -320,11 +319,10 @@ const Header = () => {
                         changeLanguage(language.code);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`px-3 py-1 text-sm rounded-full ${
-                        router.locale === language.code 
-                          ? 'bg-primary-color bg-opacity-10 text-primary-color' 
-                          : 'bg-gray-100 text-gray-700'
-                      }`}
+                      className={`px-3 py-1 text-sm rounded-full ${router.locale === language.code
+                        ? 'bg-primary-color bg-opacity-10 text-primary-color'
+                        : 'bg-gray-100 text-gray-700'
+                        }`}
                     >
                       {language.name}
                     </button>
