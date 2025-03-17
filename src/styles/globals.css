@@ -204,6 +204,26 @@ p {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Feature card styling */
+.feature-card {
+  background-color: white;
+  transform-origin: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.main-feature {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.main-feature:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(255, 116, 0, 0.12);
+}
+
 /* Frosted glass effect from design guide page 9 */
 .glass-effect {
   background: rgba(255, 255, 255, 0.65);

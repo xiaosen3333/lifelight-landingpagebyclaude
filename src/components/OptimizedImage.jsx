@@ -25,7 +25,7 @@ const OptimizedImage = ({
         height={height}
         quality={quality}
         className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'} ${className}`}
-        onLoadingComplete={() => setIsLoading(false)}
+        onLoad={() => setIsLoading(false)}
         priority={priority}
         placeholder="blur"
         blurDataURL={blurDataURL}

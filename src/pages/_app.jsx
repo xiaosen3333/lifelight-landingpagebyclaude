@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Script from 'next/script';
-// Import i18n config directly
+// Import i18n config from a path instead of direct require to prevent console logging
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const nextI18NextConfig = require('../../next-i18next.config.js');
 
 function MyApp({ Component, pageProps }) {
@@ -15,12 +16,13 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     // Force language detection and reload if needed
     if (router.locale && i18n.language !== router.locale) {
-      console.log(`Language mismatch detected: i18n.language=${i18n.language}, router.locale=${router.locale}`);
+      // 仅在开发模式下打印语言匹配日志
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Language: ${i18n.language} -> ${router.locale}`);
+      }
       
       // Change language immediately to match router locale
-      i18n.changeLanguage(router.locale).then(() => {
-        console.log(`Language successfully changed to: ${router.locale}`);
-      }).catch(error => {
+      i18n.changeLanguage(router.locale).catch(error => {
         console.error(`Error changing language: ${error}`);
       });
     }
@@ -29,8 +31,11 @@ function MyApp({ Component, pageProps }) {
   // Handle language switching
   useEffect(() => {
     const handleRouteChange = (url) => {
-      // Custom analytics, logging, etc.
-      console.log(`App is navigating to: ${url}`);
+      // 仅在开发模式下记录导航日志
+      if (process.env.NODE_ENV === 'development' && url.includes('?')) {
+        // 只记录带参数的URL变化，而不是每次导航
+        console.log(`Navigation: ${url}`);
+      }
     };
 
     router.events.on('routeChangeStart', handleRouteChange);
@@ -49,11 +54,6 @@ function MyApp({ Component, pageProps }) {
         {/* Set language in meta */}
         <meta httpEquiv="Content-Language" content={router.locale} />
       </Head>
-      
-      {/* Debug info */}
-      <Script id="locale-debug" strategy="afterInteractive">
-        {`console.log('App loaded with locale: ${router.locale}')`}
-      </Script>
       
       <Component {...pageProps} />
     </>

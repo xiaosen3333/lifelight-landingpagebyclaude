@@ -21,11 +21,6 @@ const TodoPage = () => {
       <Head>
         <title>{t('todo.meta.title')}</title>
         <meta name="description" content={t('todo.meta.description')} />
-        <link rel="icon" href="/favicon.ico" />
-        {/* Add fonts to match design guidelines */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
       <Header />

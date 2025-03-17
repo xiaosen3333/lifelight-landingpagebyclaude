@@ -10,7 +10,7 @@ module.exports = {
     localeDetection: true,
   },
   localePath: path.resolve('./public/locales'),
-  debug: process.env.NODE_ENV === 'development',
+  debug: false, // 禁用调试以防止配置信息打印
   reloadOnPrerender: process.env.NODE_ENV === 'development',
   
   // Prevent loading default namespace from a server endpoint

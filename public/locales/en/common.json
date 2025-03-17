@@ -312,6 +312,7 @@
   "features": {
     "title": "Core Features",
     "description": "\"Lifelight\" provides a comprehensive emotional support platform through four core feature modules—Journal, Companion, Gallery, and Insights.",
+    "learnMore": "Learn More",
     "journal": {
       "title": "Journal",
       "description": "Capture moments, express feelings. Record your life with text, photos, and emotions."
