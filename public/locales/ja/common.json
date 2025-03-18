@@ -315,7 +315,8 @@
     "adhd": "ADHD",
     "emotionallySensitive": "感情的に敏感な人",
     "fitnessEnthusiasts": "フィットネス愛好家",
-    "language": "言語"
+    "language": "言語",
+    "login": "ログイン"
   },
   "hero": {
     "title": "<span class=\"text-gradient-primary\">Lifelight</span> - あなたのAI生活記録コンパニオン",

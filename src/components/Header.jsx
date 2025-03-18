@@ -161,9 +161,9 @@ const Header = () => {
             {t('header.pricing')}
           </Link>
 
-          {/* <Link href="/download" className="btn btn-primary ml-2">
-            {t('header.getApp')}
-          </Link> */}
+          <a href="https://www.lifelight.app" className="btn btn-primary ml-2" target="_blank" rel="noopener noreferrer">
+            {t('header.login')}
+          </a>
 
           {/* Language Switcher */}
           <div className="relative ml-4 lang-switcher">
@@ -292,9 +292,9 @@ const Header = () => {
               <Link href="/pricing" className="font-medium hover:text-primary-color transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                 {t('header.pricing')}
               </Link>
-              {/* <Link href="/download" className="btn btn-primary w-full text-center" onClick={() => setIsMobileMenuOpen(false)}>
-                {t('header.getApp')}
-              </Link> */}
+              <a href="https://www.lifelight.app" className="btn btn-primary w-full text-center mt-4" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
+                {t('header.login')}
+              </a>
 
               {/* Mobile Language Switcher */}
               <div className="border-t pt-4 mt-2 lang-switcher-mobile">

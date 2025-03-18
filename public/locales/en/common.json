@@ -315,7 +315,8 @@
     "adhd": "ADHD",
     "emotionallySensitive": "Emotionally Sensitive",
     "fitnessEnthusiasts": "Fitness Enthusiasts",
-    "language": "Language"
+    "language": "Language",
+    "login": "Login"
   },
   "hero": {
     "title": "<span class=\"text-gradient-primary\">Lifelight</span> - Your AI Life-Recording Companion",
