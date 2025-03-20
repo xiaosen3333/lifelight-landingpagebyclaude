@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import HeroSection from '../components/HeroSection';
-import FeaturesSection from '../components/FeaturesSection';
 import CompanionSection from '../components/CompanionSection';
 import JournalSection from '../components/JournalSection';
 import GallerySection from '../components/GallerySection';
@@ -87,7 +86,6 @@ export default function Home({ locale }) {
         <CompanionSection />
         <GallerySection />
         <InsightsSection />
-        <FeaturesSection />
         <TestimonialsSection />
         <DownloadSection />
       </main>
