@@ -121,7 +121,7 @@ All sections should use the container class for consistent width:
 <section id="section-name" className="section bg-white relative overflow-hidden">
   <div className="container relative z-10">
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold mb-4">Section Title</h2>
+      <h2 className="text-6xl font-bold mb-4">Section Title</h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto">Section description</p>
     </div>
     

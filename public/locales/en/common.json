@@ -360,13 +360,17 @@
   "journal": {
     "badge": "Smart ✨",
     "title": "Capture Moments, Express Feelings",
-    "description": "The \"Journal\" module allows you to easily and privately capture every important moment in your life, whether it's through text, photos, or a mix of both. With an intuitive interface and smart prompts, we help you connect your daily life to your inner world, creating unique memories that you can revisit and explore anytime, anywhere.",
-    "features": [
-      "Combine text, images, and music to fully record daily activities and emotional experiences",
-      "Express emotional states with the help of AI companion responses",
-      "Capture subtle emotional fluctuations for a richer retrospective experience",
-      "Create layered emotional recall experiences to help you revisit and treasure every moment"
-    ],
+    "description": "Lifelight creates an intelligent journaling space for you, allowing you to preserve every thought in the most natural way through text, images, videos, and even music. The powerful AI assistant identifies content themes in real-time and provides emotional responses, making the journaling process not only smooth but also filled with warmth.",
+    "features": {
+      "0": "Integrate text, photos, videos, Live Photos",
+      "1": "Intelligently identify content and auto-organize",
+      "2": "Automatically gather scattered records into your 'Book of Life'"
+    },
+    "featuresEmoji": {
+      "0": "📱",
+      "1": "🤖",
+      "2": "📚"
+    },
     "imageAlt": "Journal Feature Screenshot",
     "emojiAlt": "Journal Emoji",
     "quoteLine1": "Capture moments,",
@@ -380,14 +384,18 @@
   },
   "companion": {
     "badge": "Understand You ✨",
-    "title": "Your AI, Always By Your Side",
-    "description": "The \"Companion\" module provides warm emotional support through personalized AI friends. Choose from a variety of virtual companions with different personalities, like gentle mental health advisors, humorous friends, or lively pets, and customize them according to your preferences. These virtual companions offer unique ways of interaction to meet your different needs, making companionship more considerate and fun.",
-    "features": [
-      "Choose from companions with distinct personalities and background stories",
-      "Customize your AI companion's personality and interaction style",
-      "Engage in meaningful conversations about your life and emotions",
-      "Receive personalized advice and emotional support when you need it most"
-    ],
+    "title": "Your Personal AI, A True Confidant",
+    "description": "Choose your exclusive companion from a variety of AI friends with different personalities, or completely customize one to match your character. They not only listen to your thoughts but also gradually understand your expression style, emotional fluctuations, and living habits through deep learning, providing just the right responses.",
+    "features": {
+      "0": "Find the AI friend that suits you best",
+      "1": "Create an interaction experience unique to you",
+      "2": "Receive warm summaries customized for you"
+    },
+    "featuresEmoji": {
+      "0": "🦉",
+      "1": "✨",
+      "2": "✉️"
+    },
     "personalized": "Personalized for you",
     "friend": "Friend",
     "alwaysWithYou": "Always by your side",
@@ -400,14 +408,18 @@
   },
   "gallery": {
     "badge": "Help You ✨",
-    "title": "Art, Memories, and Self-Expression",
-    "description": "The \"Gallery\" module displays your daily life activities and emotional changes through a combination of emotional trends and calendar visualization. Photos or notes uploaded daily are presented in a calendar format, with each grid representing a day's record. Users can easily review their monthly life highlights, and color-coded emotion displays along with monthly summaries help them understand emotional cycles and discover special days.",
-    "features": [
-      "View daily uploads in an intuitive calendar interface",
-      "Track emotional trends with color-coded visualizations",
-      "Easily switch between months for a chronological experience",
-      "Discover patterns in your emotions and activities over time"
-    ],
+    "title": "Organize Life, Discover Patterns",
+    "description": "Lifelight is more than just a recording tool; it's a life assistant. Through beautiful visualization interfaces and intelligent analysis, it helps you organize thoughts, find patterns, and discover yourself, making your records meaningful, valuable, and more beautiful.",
+    "features": {
+      "0": "View daily memories at a glance",
+      "1": "Track emotional changes intuitively",
+      "2": "Quickly locate important recorded content"
+    },
+    "featuresEmoji": {
+      "0": "📅",
+      "1": "🚦",
+      "2": "🔍"
+    },
     "imageAlt": "Gallery Feature Screenshot",
     "emojiAlt": "Gallery Emoji",
     "calendarView": "Calendar View",
@@ -422,14 +434,18 @@
   },
   "insights": {
     "badge": "Accompanies You ✨",
-    "title": "Understand Your Emotional Journey",
-    "description": "The \"Insights\" module helps users extract key data and insights from their daily records, providing deep multi-dimensional review and reflection. Through this feature, users can view various statistics recorded during long-term use, such as number of days recorded, number of inspiration items, total text volume, and frequency of cherished photo memories. These data not only help users quantify their emotional journey and see emotional changes intuitively, but also reflect the evolution of personal growth and mood.",
-    "features": [
-      "View detailed statistics about your journaling habits and patterns",
-      "Receive AI-generated insights about your emotional trends",
-      "Get personalized recommendations based on your mood patterns",
-      "Visualize your journey through intuitive charts and graphs"
-    ],
+    "title": "Walking With You, Growing Together",
+    "description": "Lifelight is a warm companion in your life, appearing not just in moments when you record, but in every instant when you need to confide, need understanding, need support. Through deep analysis of your recorded content, Lifelight can provide personalized emotional insights, helping you better understand yourself and embrace growth.",
+    "features": {
+      "0": "Explore your life questions with AI",
+      "1": "Interpret changes and provide growth suggestions",
+      "2": "Receive warm voice messages at important moments"
+    },
+    "featuresEmoji": {
+      "0": "🔮",
+      "1": "📊",
+      "2": "📞"
+    },
     "analysis": "Analysis",
     "personalizedInsights": "Personalized insights",
     "understand": "Understand your",

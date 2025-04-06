@@ -24,7 +24,7 @@ const GallerySection = () => {
       <div className="container relative z-10">
         {/* 标题部分 */}
         <div className="mb-12 slide-in-right">
-          <div className="flex flex-row items-center mb-8 max-w-4xl mx-auto">
+          <div className="flex flex-row items-center mb-8 max-w-6xl mx-auto">
             <div className="flex flex-col w-[50%]">
               <div className="inline-block self-start px-3 py-1 rounded-xl bg-mint-blue bg-opacity-10 text-mint-blue font-medium text-base mb-2">
                 {t('gallery.badge')}
@@ -32,20 +32,25 @@ const GallerySection = () => {
               <h2 className="text-2xl md:text-3xl font-bold">{t('gallery.title')}</h2>
             </div>
             <div className="flex-grow flex flex-row items-start justify-end gap-6">
-              {t('gallery.features', { returnObjects: true }).slice(0, 3).map((item, index) => (
-                <div key={index} className="flex flex-col items-center w-1/5">
-                  <div className="w-10 h-10 rounded-full bg-mint-blue/10 flex items-center justify-center mb-2">
-                    <span className="text-mint-blue text-lg">{index === 0 ? "🖼️" : index === 1 ? "📅" : "🌈"}</span>
+              {['0', '1', '2'].map((itemNumber, index) => {
+                const featureKey = `gallery.features.${itemNumber}`;
+                const emojiKey = `gallery.featuresEmoji.${itemNumber}`;
+                
+                return (
+                  <div key={index} className="flex flex-col items-center w-1/5">
+                    <div className="w-10 h-10 rounded-full bg-mint-blue/10 flex items-center justify-center mb-2">
+                      <span className="text-mint-blue text-lg">{t(emojiKey)}</span>
+                    </div>
+                    <span className="text-sm font-medium text-center line-clamp-2">{t(featureKey)}</span>
                   </div>
-                  <span className="text-sm font-medium text-center line-clamp-2">{item}</span>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
         
         {/* 图片部分 */}
-        <div className="relative max-w-4xl mx-auto mb-12 slide-in-left">
+        <div className="relative max-w-6xl mx-auto mb-12 slide-in-left">
           <div className="bg-white rounded-[20px] shadow-xl overflow-hidden transform transition-transform hover:scale-[1.01] duration-300">
             <OptimizedImage
               src="/optimized/4.webp"
@@ -74,7 +79,7 @@ const GallerySection = () => {
         </div>
         
         {/* 替代产品部分 */}
-        <div className="mt-1 flex flex-row max-w-4xl mx-auto mb-12 items-center gap-5">
+        <div className="mt-1 flex flex-row max-w-6xl mx-auto mb-12 items-center gap-5">
           <h3 className="text-lg font-bold text-center m-0">{t('gallery.alternatives')}</h3>
           <div className="flex justify-start items-center gap-6 flex-wrap">
             <div className="flex items-center space-x-2">
