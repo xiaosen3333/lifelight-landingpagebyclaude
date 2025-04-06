@@ -54,13 +54,18 @@ const JournalSection = () => {
         {/* 图片部分 */}
         <div className="relative max-w-4xl mx-auto mb-12 slide-in-left">
           <div className="bg-white rounded-[20px] shadow-xl overflow-hidden transform transition-transform hover:scale-[1.01] duration-300">
-            <OptimizedImage
-              src="/optimized/6.webp"
+            <video
+              src="/videos/ScreenRecording_03-20-2025 20-37-24_1.mov"
               alt={t('journal.imageAlt')}
               width={1080}
               height={1920}
               className="w-full h-auto object-cover"
-            />
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+            ></video>
           </div>
 
           <div className="absolute -bottom-5 -right-5 p-4 glass-effect rounded-xl shadow-lg z-10 animate-wiggle">
