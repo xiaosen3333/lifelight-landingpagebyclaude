@@ -61,6 +61,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.privacyPolicy')}</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.termsOfService')}</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('footer.faq')}</a></li>
+              <li><Link href="/account-deletion" className="text-gray-400 hover:text-white transition-colors">{t('footer.accountDeletion')}</Link></li>
             </ul>
           </div>
         </div>

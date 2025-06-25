@@ -514,6 +514,43 @@
     "termsOfService": "Terms of Service",
     "faq": "FAQ",
     "cookies": "Cookies",
-    "copyright": "© 2023 Lifelight. All rights reserved."
+    "copyright": "© 2023 Lifelight. All rights reserved.",
+    "accountDeletion": "Delete Account"
+  },
+  "accountDeletion": {
+    "meta": {
+      "title": "Delete Account | Lifelight",
+      "description": "Learn how to delete your Lifelight account and associated data. We respect your choice and ensure transparency in the data deletion process."
+    },
+    "title": "Account Deletion Request",
+    "subtitle": "We understand you may want to delete your Lifelight account. Please follow the steps below.",
+    "howToDelete": {
+      "title": "How to Delete Your Account",
+      "description": "For security purposes, account deletion must be completed within the Lifelight app:",
+      "step1": "Open the Lifelight app and sign in to your account",
+      "step2": "Navigate to \"Insights\" → \"Settings\" → \"Account & Sync\" → \"Account Management\"",
+      "step3": "Select \"Delete Account\" option",
+      "step4": "Follow the in-app instructions to verify and confirm deletion"
+    },
+    "dataHandling": {
+      "title": "Data Handling Information",
+      "willDelete": {
+        "title": "Data that will be deleted:",
+        "item1": "Your personal profile information",
+        "item2": "All journal entries (text, photos, videos, etc.)",
+        "item3": "AI companion conversation history",
+        "item4": "Emotion tracking and insights data"
+      },
+      "retention": {
+        "title": "Data Retention Policy",
+        "description": "As required by law, certain anonymized statistical data may be retained for product improvement. All personally identifiable information will be permanently deleted within 30 days of processing your deletion request."
+      }
+    },
+    "contact": {
+      "title": "Need Help?",
+      "description": "If you encounter any issues during the account deletion process or have other questions, please feel free to contact our support team.",
+      "email": "Email"
+    },
+    "appInfo": "Lifelight - Your AI Life-Recording Companion"
   }
 }
