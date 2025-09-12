@@ -77,7 +77,7 @@ export default function Home({ locale }) {
         }}
       />
 
-      <Header />
+      {/* <Header /> */}
 
       <main>
         <HeroSection />
