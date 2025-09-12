@@ -37,11 +37,6 @@ const HeroSection = () => {
         {/* Text content - expanded to 5/12 columns */}
         <div className="md:col-span-5 slide-in-left relative z-10">
           <div className="relative">
-            {/* Decorative badge */}
-            <div className="absolute -top-5 -left-6 glass-effect text-gradient-rose px-4 py-1 rounded-full text-sm font-bold shadow-lg animate-bounce-gentle transform rotate-[-5deg]">
-              AI + {t('hero.life')}
-            </div>
-
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative"
               dangerouslySetInnerHTML={{ __html: t('hero.title') }}
@@ -55,12 +50,12 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="#download" className="btn btn-primary transform transition-transform hover:scale-105 shadow-xl">
+              <a href="https://apps.apple.com/app/lifelight-ai-life-companion/id1631169735" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="btn btn-primary transform transition-transform hover:scale-105 shadow-xl">
                 {t('hero.downloadBtn')}
-              </Link>
-              <Link href="#features" className="btn btn-secondary transform transition-transform hover:scale-105">
-                {t('hero.learnMoreBtn')}
-              </Link>
+              </a>
             </div>
           </div>
         </div>

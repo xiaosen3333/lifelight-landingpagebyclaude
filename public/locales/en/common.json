@@ -1,10 +1,10 @@
 {
   "seo": {
-    "defaultTitle": "Lifelight - Your AI Life-Recording Companion",
-    "defaultDescription": "Lifelight helps you organize tasks, journal your thoughts, and boost productivity with AI-powered tools.",
+    "defaultTitle": "Lifelight - Moment Keeper",
+    "defaultDescription": "Where self-care meets memories. Greetings! Meet Lifelight :) Ready for daily self-care?",
     "homeMeta": {
-      "title": "Lifelight - Your AI Life-Recording Companion",
-      "description": "Transform your productivity with Lifelight's suite of AI-powered tools for task management, journaling, and more."
+      "title": "Lifelight - Moment Keeper",
+      "description": "Where self-care meets memories. Ready for daily self-care?"
     },
     "pricingMeta": {
       "title": "Lifelight Pricing - Choose Your Perfect Plan", 
@@ -16,8 +16,8 @@
     }
   },
   "meta": {
-    "title": "Lifelight - Your AI Life-Recording Companion",
-    "description": "Lifelight is an AI life-recording companion that helps you capture life moments, express feelings, and understand your emotional journey."
+    "title": "Lifelight - Moment Keeper",
+    "description": "Where self-care meets memories. Greetings! Meet Lifelight :) Ready for daily self-care?"
   },
   "todo": {
     "meta": {
@@ -146,7 +146,7 @@
   },
   "downloadPage": {
     "meta": {
-      "title": "Download Lifelight | Your AI Life-Recording Companion",
+      "title": "Download Lifelight | Moment Keeper",
       "description": "Download the Lifelight app for iOS and Android devices. Start capturing life moments, expressing feelings, and understanding your emotional journey today."
     },
     "title": "Download <span class=\"text-gradient-primary\">Lifelight</span> App",
@@ -319,10 +319,10 @@
     "login": "Login"
   },
   "hero": {
-    "title": "<span class=\"text-gradient-primary\">Lifelight</span> - Your AI Life-Recording Companion",
+    "title": "<span class=\"text-gradient-primary\">Lifelight</span>: Moment Keeper",
     "companion": "Companion",
     "life": "Life",
-    "description": "Be seen, be understood, never alone. Lifelight is your AI companion that starts with self-expression to deeply understand you as a unique individual.",
+    "description": "Where self-care meets memories. Greetings! Meet Lifelight :) Ready for daily self-care?",
     "downloadBtn": "Download Now",
     "learnMoreBtn": "Learn More",
     "recordMoments": "Record life moments",
@@ -501,7 +501,7 @@
     }
   },
   "footer": {
-    "tagline": "Your AI Life Companion.<br/>Record moments, treasure emotions,<br/>Become your best self with AI by your side.",
+    "tagline": "Where self-care meets memories.",
     "product": "Product",
     "company": "Company",
     "support": "Support",
@@ -514,7 +514,7 @@
     "termsOfService": "Terms of Service",
     "faq": "FAQ",
     "cookies": "Cookies",
-    "copyright": "© 2023 Lifelight. All rights reserved.",
+    "copyright": "© 2025 Lifelight. All rights reserved.",
     "accountDeletion": "Delete Account"
   },
   "accountDeletion": {
@@ -551,6 +551,6 @@
       "description": "If you encounter any issues during the account deletion process or have other questions, please feel free to contact our support team.",
       "email": "Email"
     },
-    "appInfo": "Lifelight - Your AI Life-Recording Companion"
+    "appInfo": "Lifelight - Moment Keeper"
   }
 }

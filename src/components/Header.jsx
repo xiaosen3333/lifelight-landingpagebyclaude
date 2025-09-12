@@ -57,7 +57,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <div className="flex items-center font-bold text-2xl">
-              <span className="text-gradient-primary">心光 Lifelight</span>
+              <span className="text-gradient-primary">Lifelight</span>
               <span className="text-rose-pink ml-1"></span>
               <div className="ml-2 w-5 h-5 rounded-full bg-gradient-primary"></div>
             </div>

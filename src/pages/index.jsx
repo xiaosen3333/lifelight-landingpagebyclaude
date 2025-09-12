@@ -7,7 +7,6 @@ import JournalSection from '../components/JournalSection';
 import GallerySection from '../components/GallerySection';
 import InsightsSection from '../components/InsightsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
-import DownloadSection from '../components/DownloadSection';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import SEO from '../components/SEO';
@@ -87,7 +86,6 @@ export default function Home({ locale }) {
         <GallerySection />
         <InsightsSection />
         <TestimonialsSection />
-        <DownloadSection />
       </main>
 
       <Footer />
