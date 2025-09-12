@@ -6,18 +6,18 @@ const path = require('path');
 module.exports = {
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh', 'zh-TW', 'ja'],
+    locales: ['en'],
     localeDetection: false,
   },
   localePath: path.resolve('./public/locales'),
-  debug: false, // 禁用调试以防止配置信息打印
+  debug: false,
   reloadOnPrerender: process.env.NODE_ENV === 'development',
   
   // Prevent loading default namespace from a server endpoint
   load: 'all',
   
   // Force load for all locales on startup
-  preload: ['en', 'zh', 'zh-TW', 'ja'],
+  preload: ['en'],
   
   // Set detection order 
   detection: {

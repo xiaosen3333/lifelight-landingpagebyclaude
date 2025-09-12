@@ -11,10 +11,7 @@ const Header = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
 
   const languages = [
-    { code: 'en', name: 'English' },
-    { code: 'zh', name: '简体中文' },
-    { code: 'zh-TW', name: '繁體中文' },
-    { code: 'ja', name: '日本語' }
+    { code: 'en', name: 'English' }
   ];
 
   const changeLanguage = (locale) => {
