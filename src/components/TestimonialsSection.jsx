@@ -7,19 +7,19 @@ const TestimonialsSection = () => {
       title: "3am thoughts found home",
       text: "Used to lie awake overthinking. Now I write it down and sleep peacefully. Lifelight's responses feel like a warm hug.",
       author: "Michelle H.",
-      avatar: "/optimized/feature-journal.webp"
+      avatar: "/optimized/avatar-michelle.webp"
     },
     {
       title: "I absolutely love this app",
       text: "2 weeks of micro-moments showed me why Mondays hit different. Now I prep for them.",
       author: "Jacob W.",
-      avatar: "/optimized/feature-connect.webp"
+      avatar: "/optimized/avatar-jacob.webp"
     },
     {
       title: "My safe space to vent",
       text: "No day feels empty anymore. Life feels longer with memories recorded.",
       author: "Lisa K.",
-      avatar: "/optimized/feature-vision.webp"
+      avatar: "/optimized/avatar-lisa.webp"
     }
   ];
 
