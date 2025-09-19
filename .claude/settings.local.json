@@ -15,7 +15,8 @@
       "Bash(npm run dev:*)",
       "Bash(node:*)",
       "Read(//System/Library/Fonts/**)",
-      "Read(//Users/xinguangappleus/Library/Fonts/**)"
+      "Read(//Users/xinguangappleus/Library/Fonts/**)",
+      "Bash(md5:*)"
     ],
     "deny": []
   }

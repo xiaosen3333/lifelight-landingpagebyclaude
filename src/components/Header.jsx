@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import OptimizedImage from './OptimizedImage';
 
 const Header = () => {
   const { t } = useTranslation('common');
@@ -56,10 +57,15 @@ const Header = () => {
       <div className="container flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/">
-            <div className="flex items-center font-bold text-2xl">
-              <span className="text-gradient-primary">Lifelight</span>
-              <span className="text-rose-pink ml-1"></span>
-              <div className="ml-2 w-5 h-5 rounded-full bg-gradient-primary"></div>
+            <div className="flex items-center gap-2">
+              <OptimizedImage
+                src="/optimized/lifelightIconCircleBorder.webp"
+                alt="Lifelight Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
+              <span className="font-bold text-2xl font-rounded text-black">Lifelight</span>
             </div>
           </Link>
         </div>

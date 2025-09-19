@@ -20,6 +20,8 @@ class MyDocument extends Document {
 
           {/* Favicon / App Icons */}
           <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+          <link rel="icon" type="image/png" href="/icons/favicon.png" />
+          <link rel="apple-touch-icon" href="/icons/favicon.png" />
           <meta name="theme-color" content="#FF7400" />
           <meta name="author" content="Lifelight Team" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
