@@ -68,17 +68,19 @@ const TestimonialsSection = () => {
               className="relative"
               style={{
                 marginTop: index === 0 ? '0' : '-30px',
-                zIndex: index + 1
+                zIndex: index + 1,
+                marginLeft: index === 1 ? '60px' : '-30px',
+                marginRight: index === 1 ? '-60px' : '30px'
               }}
             >
               {/* Main card with glass morphism effect */}
-              <div className={`relative bg-white/70 backdrop-blur-md rounded-3xl p-10 border-2 border-white shadow-2xl transform hover:scale-[1.02] transition-transform ${
+              <div className={`relative bg-white/70 backdrop-blur-md rounded-[60px] p-10 border-2 border-white shadow-2xl transform hover:scale-[1.02] transition-transform ${
                 index === 0 ? 'rotate-1' :
                 index === 1 ? '-rotate-2' :
                 'rotate-1'
               }`}>
                 {/* Inner glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-white/30 rounded-3xl pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-white/30 rounded-[60px] pointer-events-none"></div>
 
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-6">{testimonial.title}</h3>
