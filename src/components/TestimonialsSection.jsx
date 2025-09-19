@@ -60,24 +60,43 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* Testimonial Cards */}
-        <div className="space-y-12">
+        {/* Testimonial Cards with stacked effect */}
+        <div className="relative max-w-3xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">{testimonial.title}</h3>
-              <div className="flex items-start gap-4">
-                <OptimizedImage
-                  src={testimonial.avatar}
-                  alt={`${testimonial.author} avatar`}
-                  width={80}
-                  height={80}
-                  className="w-20 h-20 rounded-full object-cover flex-shrink-0"
-                />
-                <div className="flex-1">
-                  <p className="text-xl leading-relaxed mb-4">
-                    {testimonial.text}
-                  </p>
-                  <p className="text-lg text-right">~ {testimonial.author}</p>
+            <div
+              key={index}
+              className="relative"
+              style={{
+                marginTop: index === 0 ? '0' : '-30px',
+                zIndex: index + 1
+              }}
+            >
+              {/* Main card with glass morphism effect */}
+              <div className={`relative bg-white/70 backdrop-blur-md rounded-3xl p-10 border-2 border-white shadow-2xl transform hover:scale-[1.02] transition-transform ${
+                index === 0 ? 'rotate-1' :
+                index === 1 ? '-rotate-2' :
+                'rotate-1'
+              }`}>
+                {/* Inner glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-white/30 rounded-3xl pointer-events-none"></div>
+
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold mb-6">{testimonial.title}</h3>
+                  <div className="flex items-start gap-4">
+                    <OptimizedImage
+                      src={testimonial.avatar}
+                      alt={`${testimonial.author} avatar`}
+                      width={80}
+                      height={80}
+                      className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-3 border-white shadow-lg"
+                    />
+                    <div className="flex-1">
+                      <p className="text-xl leading-relaxed mb-4 text-gray-800">
+                        {testimonial.text}
+                      </p>
+                      <p className="text-lg text-right text-gray-600">~ {testimonial.author}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
