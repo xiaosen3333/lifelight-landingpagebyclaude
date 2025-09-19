@@ -6,4 +6,4 @@ Allow: /
 Host: https://lifelight.app
 
 # Sitemaps
-Sitemap: https://lifelight.app/lifelight-sitemap.xml
+Sitemap: https://lifelight.app/sitemap.xml
