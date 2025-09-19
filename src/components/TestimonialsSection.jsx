@@ -28,26 +28,20 @@ const TestimonialsSection = () => {
       <div className="container max-w-6xl mx-auto px-6">
         {/* App Store App of the Month Badge */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="flex flex-col items-center">
-              <span className="text-6xl" style={{ transform: 'scaleX(-1)' }}>🌿</span>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center gap-2 justify-center mb-2">
-                <span className="text-2xl">🍎</span>
-                <h3 className="text-3xl font-bold text-amber-500 font-rounded">App Store</h3>
-              </div>
-              <h2 className="text-4xl font-bold text-amber-500 font-rounded">App of the Month</h2>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-6xl">🌿</span>
-            </div>
+          <div className="flex items-center justify-center mb-6">
+            <OptimizedImage
+              src="/optimized/appStoreAppOfTheMonth.webp"
+              alt="App Store App of the Month"
+              width={600}
+              height={150}
+              className="max-w-xl w-full h-auto"
+            />
           </div>
 
           {/* Reviews Stats */}
           <div className="mb-8">
             <div className="flex items-center justify-center gap-1 mb-2">
-              <span className="text-5xl font-bold font-rounded">10,000+</span>
+              <span className="text-4xl font-bold font-rounded">10,000+</span>
               <div className="flex gap-1 ml-3">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-10 h-10 text-yellow-400 fill-current" viewBox="0 0 24 24">
@@ -56,7 +50,7 @@ const TestimonialsSection = () => {
                 ))}
               </div>
             </div>
-            <p className="text-2xl font-rounded">reviews worldwide</p>
+            <p className="text-3xl font-rounded">reviews worldwide</p>
           </div>
         </div>
 
@@ -92,7 +86,7 @@ const TestimonialsSection = () => {
                       className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-3 border-white shadow-lg"
                     />
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-4 font-rounded">{testimonial.title}</h3>
+                      <h3 className="text-2xl font-bold mb-2 font-rounded">{testimonial.title}</h3>
                       <p className="text-xl leading-relaxed mb-4 text-gray-800 font-rounded">
                         {testimonial.text}
                       </p>
