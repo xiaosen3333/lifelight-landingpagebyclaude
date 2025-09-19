@@ -35,9 +35,9 @@ const TestimonialsSection = () => {
             <div className="text-center">
               <div className="flex items-center gap-2 justify-center mb-2">
                 <span className="text-2xl">🍎</span>
-                <h3 className="text-3xl font-bold text-amber-500">App Store</h3>
+                <h3 className="text-3xl font-bold text-amber-500 font-rounded">App Store</h3>
               </div>
-              <h2 className="text-4xl font-bold text-amber-500">App of the Month</h2>
+              <h2 className="text-4xl font-bold text-amber-500 font-rounded">App of the Month</h2>
             </div>
             <div className="flex flex-col items-center">
               <span className="text-6xl">🌿</span>
@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
           {/* Reviews Stats */}
           <div className="mb-8">
             <div className="flex items-center justify-center gap-1 mb-2">
-              <span className="text-5xl font-bold">10,000+</span>
+              <span className="text-5xl font-bold font-rounded">10,000+</span>
               <div className="flex gap-1 ml-3">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-10 h-10 text-yellow-400 fill-current" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
                 ))}
               </div>
             </div>
-            <p className="text-2xl">reviews worldwide</p>
+            <p className="text-2xl font-rounded">reviews worldwide</p>
           </div>
         </div>
 
@@ -83,7 +83,6 @@ const TestimonialsSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-white/30 rounded-[60px] pointer-events-none"></div>
 
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-6">{testimonial.title}</h3>
                   <div className="flex items-start gap-4">
                     <OptimizedImage
                       src={testimonial.avatar}
@@ -93,10 +92,11 @@ const TestimonialsSection = () => {
                       className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-3 border-white shadow-lg"
                     />
                     <div className="flex-1">
-                      <p className="text-xl leading-relaxed mb-4 text-gray-800">
+                      <h3 className="text-2xl font-bold mb-4 font-rounded">{testimonial.title}</h3>
+                      <p className="text-xl leading-relaxed mb-4 text-gray-800 font-rounded">
                         {testimonial.text}
                       </p>
-                      <p className="text-lg text-right text-gray-600">~ {testimonial.author}</p>
+                      <p className="text-lg text-right text-gray-600 font-rounded">~ {testimonial.author}</p>
                     </div>
                   </div>
                 </div>

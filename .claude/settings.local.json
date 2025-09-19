@@ -13,7 +13,9 @@
       "Bash(git push:*)",
       "Bash(npm run build:*)",
       "Bash(npm run dev:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Read(//System/Library/Fonts/**)",
+      "Read(//Users/xinguangappleus/Library/Fonts/**)"
     ],
     "deny": []
   }

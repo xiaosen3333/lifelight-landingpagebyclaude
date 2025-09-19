@@ -30,6 +30,7 @@ module.exports = {
       fontFamily: {
         // Typography system from design guide
         'sans': ['SF Pro', 'ui-sans-serif', 'system-ui'],
+        'rounded': ['SF Pro Rounded', 'SF Pro', 'ui-sans-serif', 'system-ui'],
         'serif': ['New York', 'ui-serif', 'Georgia'],
         'serif-cn': ['Source Han Serif CN', 'Noto Serif SC', 'serif'],
       },
