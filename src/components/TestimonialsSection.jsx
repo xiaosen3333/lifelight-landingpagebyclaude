@@ -38,19 +38,35 @@ const TestimonialsSection = () => {
             />
           </div>
 
-          {/* Reviews Stats */}
-          <div className="mb-8">
-            <div className="flex items-center justify-center gap-1 mb-2">
-              <span className="text-4xl font-bold font-rounded">10,000+</span>
-              <div className="flex gap-1 ml-3">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-10 h-10 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                ))}
-              </div>
+          {/* Reviews Stats with Confetti */}
+          <div className="mb-8 relative">
+            {/* Scattered Confetti/Ribbon decorations behind text */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-0 left-[20%] w-8 h-2 bg-blue-400 rounded-full transform rotate-45 opacity-50"></div>
+              <div className="absolute top-3 right-[25%] w-6 h-2 bg-green-500 rounded-full transform -rotate-12 opacity-50"></div>
+              <div className="absolute bottom-2 left-[35%] w-10 h-2 bg-teal-400 rounded-full transform rotate-[25deg] opacity-50"></div>
+              <div className="absolute top-6 left-[15%] w-5 h-2 bg-pink-400 rounded-full transform -rotate-[35deg] opacity-50"></div>
+              <div className="absolute bottom-5 right-[30%] w-12 h-2 bg-green-400 rounded-full transform rotate-12 opacity-50"></div>
+              <div className="absolute top-1 right-[15%] w-7 h-2 bg-blue-300 rounded-full transform -rotate-[20deg] opacity-50"></div>
+              <div className="absolute bottom-0 left-[45%] w-6 h-2 bg-teal-500 rounded-full transform rotate-[40deg] opacity-50"></div>
+              <div className="absolute top-4 left-[55%] w-9 h-2 bg-pink-300 rounded-full transform rotate-[60deg] opacity-50"></div>
+              <div className="absolute bottom-3 right-[20%] w-8 h-2 bg-yellow-300 rounded-full transform -rotate-[50deg] opacity-50"></div>
             </div>
-            <p className="text-3xl font-rounded">reviews worldwide</p>
+
+            {/* Main content on top */}
+            <div className="relative z-10">
+              <div className="flex items-center justify-center gap-1 mb-2">
+                <span className="text-4xl font-bold font-rounded">10,000+</span>
+                <div className="flex gap-1 ml-3">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-10 h-10 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-3xl font-rounded">reviews worldwide</p>
+            </div>
           </div>
         </div>
 
